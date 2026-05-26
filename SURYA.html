@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asian Mag Exim Inc | Industrial Minerals & Steel Plant Products</title>
+<meta name="description" content="Asian Mag Exim Inc – Trusted Manufacturer, Exporter & Supplier of Refractory Products, Magnesium Sulphate Products and Steel Plant Products since 2005.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   GLOBAL PERFORMANCE SETTINGS
+========================================================= */
+/* =========================================================
+   PREMIUM HERO BACKGROUND ANIMATION
+   Ultra Lightweight + GPU Accelerated
+========================================================= */
+
+/* -----------------------------------------
+   Animated Floating Orbs
+----------------------------------------- */
+/* =========================================================
+   LIGHTWEIGHT RAIN EFFECT
+   GPU-Friendly + Ultra Performant
+========================================================= */
+/* =========================================================
+   PREMIUM VERTICAL RAIN EFFECT
+   Ultra Lightweight + GPU Accelerated
+========================================================= */
+
+.rain{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:1;
+  opacity:.32;
+}
+
+/* Main rain layer */
+
+.rain::before,
+.rain::after{
+  content:"";
+  position:absolute;
+  inset:-150% 0;
+  
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0),
+      rgba(120,180,255,.55),
+      rgba(255,255,255,0)
+    );
+
+  background-size: 2px 90px;
+  background-repeat: repeat;
+
+  will-change: transform;
+  transform: translate3d(0,0,0);
+
+  animation: verticalRain linear infinite;
+}
+
+/* Front layer */
+
+.rain::before{
+  left:0;
+
+  opacity:.26;
+
+  background-position:
+    10px 0,
+    80px 120px,
+    160px 40px,
+    240px 180px,
+    320px 60px,
+    400px 140px,
+    520px 20px,
+    640px 200px;
+
+  animation-duration: 7s;
+}
+
+/* Depth layer */
+
+.rain::after{
+  left:40px;
+
+  opacity:.12;
+
+  filter: blur(.4px);
+
+  background-size: 1px 70px;
+
+  animation-duration: 11s;
+}
+
+/* Smooth vertical movement */
+
+@keyframes verticalRain{
+
+  from{
+    transform: translate3d(0,-10%,0);
+  }
+
+  to{
+    transform: translate3d(0,10%,0);
+  }
+}
+
+/* subtle glow blend */
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.03),
+      rgba(255,255,255,0)
+    );
+
+  pointer-events:none;
+  z-index:1;
+}
+
+/* mobile optimization */
+
+@media (max-width:768px){
+
+  .rain{
+    opacity:.18;
+  }
+
+  .rain::after{
+    display:none;
+  }
+}
+
+/* reduced motion */
+
+@media (prefers-reduced-motion: reduce){
+
+  .rain,
+  .rain::before,
+  .rain::after{
+    animation:none !important;
+  }
+}
+/* rain */
+.hero-bg-orb{
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+  filter:blur(80px);
+  opacity:.18;
+  will-change:transform;
+  transform:translate3d(0,0,0);
+}
+
+/* Blue Orb */
+
+.orb1{
+  width:520px;
+  height:520px;
+  background:radial-gradient(circle,
+    rgba(46,134,222,.9),
+    transparent 70%);
+  top:-120px;
+  right:-120px;
+  animation:orbFloat1 18s ease-in-out infinite;
+}
+
+/* Gold Orb */
+
+.orb2{
+  width:380px;
+  height:380px;
+  background:radial-gradient(circle,
+    rgba(232,160,32,.45),
+    transparent 70%);
+  bottom:-120px;
+  left:-80px;
+  animation:orbFloat2 22s ease-in-out infinite;
+}
+
+/* Navy Orb */
+
+.orb3{
+  width:280px;
+  height:280px;
+  background:radial-gradient(circle,
+    rgba(15,76,154,.55),
+    transparent 70%);
+  top:42%;
+  left:45%;
+  animation:orbFloat3 26s ease-in-out infinite;
+}
+
+/* -----------------------------------------
+   Orb Motion
+----------------------------------------- */
+
+@keyframes orbFloat1{
+  0%,100%{
+    transform:translate3d(0,0,0);
+  }
+  50%{
+    transform:translate3d(-40px,30px,0);
+  }
+}
+
+@keyframes orbFloat2{
+  0%,100%{
+    transform:translate3d(0,0,0);
+  }
+  50%{
+    transform:translate3d(50px,-40px,0);
+  }
+}
+
+@keyframes orbFloat3{
+  0%,100%{
+    transform:translate3d(0,0,0);
+  }
+  50%{
+    transform:translate3d(-30px,-25px,0);
+  }
+}
+
+/* -----------------------------------------
+   Animated Grid Glow
+----------------------------------------- */
+
+.hero-grid-glow{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.08;
+
+  background:
+    linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+
+  background-size:90px 90px;
+
+  mask-image:
+    radial-gradient(circle at center,
+    rgba(0,0,0,1),
+    transparent 80%);
+
+  animation:gridMove 18s linear infinite;
+  will-change:transform;
+}
+
+/* GPU-only movement */
+
+@keyframes gridMove{
+  from{
+    transform:translate3d(0,0,0);
+  }
+  to{
+    transform:translate3d(-90px,-90px,0);
+  }
+}
+
+/* -----------------------------------------
+   Noise Texture Overlay
+----------------------------------------- */
+
+.hero-noise{
+  position:absolute;
+  inset:0;
+  opacity:.025;
+  pointer-events:none;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='%23ffffff' fill-opacity='.5'%3E%3Ccircle cx='2' cy='2' r='1'/%3E%3C/g%3E%3C/svg%3E");
+
+  mix-blend-mode:soft-light;
+}
+
+/* -----------------------------------------
+   Smooth Background Pulse
+----------------------------------------- */
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:-20%;
+  pointer-events:none;
+
+  background:
+    radial-gradient(circle at 20% 30%,
+    rgba(46,134,222,.10),
+    transparent 40%),
+
+    radial-gradient(circle at 80% 70%,
+    rgba(232,160,32,.08),
+    transparent 40%);
+
+  animation:bgPulse 12s ease-in-out infinite;
+  will-change:opacity, transform;
+}
+
+@keyframes bgPulse{
+  0%,100%{
+    opacity:.7;
+    transform:scale(1);
+  }
+
+  50%{
+    opacity:1;
+    transform:scale(1.04);
+  }
+}
+
+/* Animation */
+:root{
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --tr: .6s var(--ease);
+  --primary: #1f6fff;
+  --accent: #f4b942;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation:none !important;
+    transition:none !important;
+    scroll-behavior:auto !important;
+  }
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+#navbar{
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:999;
+  transition:
+    background .4s ease,
+    backdrop-filter .4s ease,
+    transform .6s var(--ease);
+  transform:translateY(-100%);
+}
+
+#navbar.nav-in{
+  transform:translateY(0);
+}
+
+#navbar.scrolled{
+  background:rgba(10,10,15,.55);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* Nav link underline */
+
+.nav-links a{
+  position:relative;
+  transition:color .3s ease;
+}
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:100%;
+  height:1px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  transform:scaleX(0);
+  transform-origin:right;
+  transition:transform .4s var(--ease);
+}
+
+.nav-links a:hover::after{
+  transform:scaleX(1);
+  transform-origin:left;
+}
+
+/* CTA Glow */
+
+.nav-cta{
+  position:relative;
+  overflow:hidden;
+}
+
+.nav-cta::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:linear-gradient(90deg,#1f6fff,#58a6ff,#f4b942);
+  opacity:0;
+  filter:blur(12px);
+  z-index:-1;
+  transition:opacity .5s ease;
+}
+
+.nav-cta:hover::before{
+  opacity:.7;
+} 
+
+/* Hamburger  */
+
+.hamburger span{
+  transition:
+    transform .35s ease,
+    opacity .3s ease;
+}
+
+.hamburger.active span:nth-child(1){
+  transform:translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+  opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+  transform:translateY(-8px) rotate(-45deg);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+/* Mouse Glow */
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  border-radius:50%;
+  background:radial-gradient(circle,
+  rgba(31,111,255,.18),
+  transparent 70%);
+  pointer-events:none;
+  left:var(--mx,50%);
+  top:var(--my,50%);
+  transform:translate(-50%,-50%);
+  z-index:0;
+  transition:opacity .3s ease;
+}
+
+/* Floating layers */
+
+.hero-glow,
+.hero-dots,
+.hero-lines{
+  will-change:transform;
+  animation:floatY 10s ease-in-out infinite;
+}
+
+.hero-lines{
+  animation-duration:14s;
+}
+
+.hero-dots{
+  animation-duration:18s;
+}
+
+@keyframes floatY{
+  0%,100%{
+    transform:translate3d(0,0,0);
+  }
+  50%{
+    transform:translate3d(0,-18px,0);
+  }
+}
+
+/* Sequential reveal */
+
+.fade-seq{
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeUp .9s var(--ease) forwards;
+}
+
+.delay-1{ animation-delay:.15s; }
+.delay-2{ animation-delay:.3s; }
+.delay-3{ animation-delay:.45s; }
+.delay-4{ animation-delay:.6s; }
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Gradient animated heading */
+
+.gradient-flow{
+  background:linear-gradient(
+    90deg,
+    #1f6fff,
+    #58a6ff,
+    #f4b942,
+    #1f6fff
+  );
+  background-size:300% 300%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:gradientMove 6s linear infinite;
+}
+
+@keyframes gradientMove{
+  0%{ background-position:0% 50%; }
+  100%{ background-position:100% 50%; }
+}
+
+/* Pills */
+
+.hv-pill{
+  animation:pillFloat 4s ease-in-out infinite;
+  transition:transform .3s ease;
+}
+
+.hv-pill:hover{
+  transform:translateY(-3px) scale(1.05);
+}
+
+.hv-pill:nth-child(2n){
+  animation-delay:1s;
+}
+
+.hv-pill:nth-child(3n){
+  animation-delay:2s;
+}
+
+@keyframes pillFloat{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-5px);
+  }
+}
+
+/* Cards */
+
+.glow-card{
+  position:relative;
+  transition:
+    transform .5s var(--ease),
+    border-color .4s ease,
+    background .4s ease;
+}
+
+.glow-card:hover{
+  transform:translateY(-10px);
+  border-color:rgba(88,166,255,.4);
+}
+
+.glow-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:linear-gradient(
+    135deg,
+    rgba(255,255,255,.08),
+    transparent
+  );
+  opacity:0;
+  transition:opacity .4s ease;
+}
+
+.glow-card:hover::after{
+  opacity:1;
+}
+
+/* Glassmorphism */
+
+.hv-card,
+.about-box{
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+/* Accent line */
+
+.stitle{
+  position:relative;
+  padding-left:22px;
+}
+
+.stitle::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:10px;
+  width:4px;
+  height:0;
+  border-radius:10px;
+  background:linear-gradient(
+    180deg,
+    var(--primary),
+    var(--accent)
+  );
+  animation:growLine 1.2s ease forwards;
+}
+
+@keyframes growLine{
+  to{
+    height:85%;
+  }
+}
+
+/* Feature stagger */
+
+.afeat{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .7s var(--ease);
+}
+
+.afeat.visible{
+  opacity:1;
+  transform:none;
+}
+
+.afeat:nth-child(2){ transition-delay:.08s; }
+.afeat:nth-child(3){ transition-delay:.16s; }
+.afeat:nth-child(4){ transition-delay:.24s; }
+
+/* Icon hover */
+
+.afeat-icon,
+.hv-mini-icon{
+  transition:
+    transform .35s ease,
+    opacity .35s ease;
+}
+
+.afeat:hover .afeat-icon,
+.hv-mini:hover .hv-mini-icon{
+  transform:rotate(-8deg) scale(1.1);
+  opacity:.9;
+}
+
+/* =========================================================
+   REVEAL UTILITIES
+========================================================= */
+
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale{
+  opacity:0;
+  will-change:transform, opacity;
+  transition:
+    transform .9s var(--ease),
+    opacity .9s var(--ease);
+}
+
+.reveal{
+  transform:translateY(50px);
+}
+
+.reveal-left{
+  transform:translateX(-60px);
+}
+
+.reveal-right{
+  transform:translateX(60px);
+}
+
+.reveal-scale{
+  transform:scale(.9);
+}
+
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active,
+.reveal-scale.active{
+  opacity:1;
+  transform:none;
+}
+
+/* =========================================================
+   BUTTON SHIMMER
+========================================================= */
+
+.btn-hero-primary,
+.btn-hero-secondary{
+  position:relative;
+  overflow:hidden;
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.btn-hero-primary:hover,
+.btn-hero-secondary:hover{
+  transform:translateY(-4px);
+}
+
+.btn-hero-primary::before,
+.btn-hero-secondary::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:60%;
+  height:100%;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.4),
+    transparent
+  );
+  transform:skewX(-25deg);
+}
+
+.btn-hero-primary:hover::before,
+.btn-hero-secondary:hover::before{
+  animation:shimmer 1s ease;
+}
+
+@keyframes shimmer{
+  100%{
+    left:150%;
+  }
+}
+/* newwwwww */
+:root {
+  --navy: #04162e;
+  --blue-deep: #0a2d5e;
+  --blue: #0f4c9a;
+  --blue-mid: #1a69d1;
+  --sky: #2e86de;
+  --sky-light: #5ba4e9;
+  --steel: #8fafc8;
+  --accent: #e8a020;
+  --accent-light: #f5c555;
+  --white: #ffffff;
+  --off-white: #f4f7fc;
+  --gray-50: #f8fafd;
+  --gray-100: #eef2f8;
+  --gray-200: #dce5f0;
+  --gray-400: #8ba3be;
+  --gray-600: #4d6a88;
+  --gray-700: #2e4a65;
+  --text: #0d1f38;
+  --text-soft: #3d5c7c;
+  --border: rgba(15,76,154,0.10);
+  --border-light: rgba(15,76,154,0.06);
+  --shadow-sm: 0 2px 12px rgba(4,22,46,0.07);
+  --shadow: 0 8px 32px rgba(4,22,46,0.11);
+  --shadow-lg: 0 20px 60px rgba(4,22,46,0.15);
+  --shadow-xl: 0 32px 80px rgba(4,22,46,0.20);
+  --r: 12px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--gray-100); }
+::-webkit-scrollbar-thumb { background: var(--blue-mid); border-radius: 4px; }
+
+/* ─── PROGRESS BAR ─── */
+#progress {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0;
+  background: linear-gradient(90deg, var(--accent), var(--sky));
+  z-index: 10000; transition: width .1s;
+}
+
+/* ─── PRELOADER ─── */
+#preloader {
+  position: fixed; inset: 0; background: var(--navy);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  z-index: 99999; transition: opacity .6s ease, visibility .6s;
+}
+#preloader.fade { opacity: 0; visibility: hidden; }
+.pre-logo {
+  font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 42px;
+  color: #fff; letter-spacing: -2px; margin-bottom: 8px;
+}
+.pre-logo span { color: var(--accent); }
+.pre-sub { font-family: 'Barlow', sans-serif; font-size: 12px; letter-spacing: 3px;
+  color: var(--steel); text-transform: uppercase; margin-bottom: 40px; }
+.pre-bar {
+  width: 200px; height: 2px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;
+}
+.pre-bar-fill {
+  height: 100%; background: linear-gradient(90deg, var(--sky), var(--accent));
+  border-radius: 2px; animation: preload 1.8s ease forwards;
+}
+@keyframes preload { from{width:0} to{width:100%} }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: 72px; display: flex; align-items: center;
+  padding: 0 clamp(20px, 5vw, 60px);
+  transition: all .3s ease;
+}
+nav.scrolled {
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 2px 24px rgba(4,22,46,0.09);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner { width: 100%; max-width: 1360px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+.logo-mark {
+  width: 42px; height: 42px; background: linear-gradient(135deg, var(--blue-deep), var(--sky));
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+  font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 14px; color: #fff; letter-spacing: -.5px;
+  box-shadow: 0 4px 14px rgba(15,76,154,0.35);
+}
+.logo-text-block { display: flex; flex-direction: column; line-height: 1.15; }
+.logo-text-block strong {
+  font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 15px;
+  color: var(--navy); letter-spacing: -.3px;
+}
+.logo-text-block span { font-size: 10.5px; color: var(--gray-400); font-weight: 500; letter-spacing: .8px; text-transform: uppercase; }
+nav.scrolled .logo-text-block strong { color: var(--navy); }
+.nav-links { display: flex; align-items: center; gap: 2px; }
+.nav-links a {
+  font-family: 'Barlow', sans-serif; font-weight: 500; font-size: 14.5px;
+  color: rgba(255,255,255,.88); text-decoration: none;
+  padding: 8px 14px; border-radius: 8px; transition: all .2s;
+}
+nav.scrolled .nav-links a { color: var(--text-soft); }
+.nav-links a:hover { color: var(--sky); background: rgba(46,134,222,.08); }
+.nav-cta {
+  margin-left: 8px; background: var(--accent) !important; color: var(--navy) !important;
+  font-weight: 700 !important; padding: 10px 22px !important;
+  box-shadow: 0 4px 16px rgba(232,160,32,.35); border-radius: 9px !important;
+}
+.nav-cta:hover { background: var(--accent-light) !important; transform: translateY(-1px); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+.hamburger span { width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: .3s; display: block; }
+nav.scrolled .hamburger span { background: var(--navy); }
+.mob-nav {
+  display: none; position: fixed; top: 72px; left: 0; right: 0;
+  background: rgba(255,255,255,.98); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border); box-shadow: var(--shadow-lg);
+  z-index: 999; flex-direction: column; padding: 12px 24px 20px;
+}
+
+/* .nav-links { display: flex; align-items: center; gap: 2px; }
+.nav-links a {
+  font-family: 'Barlow', sans-serif; font-weight: 500; font-size: 14.5px;
+  color: rgba(255,255,255,.88); text-decoration: none;
+  padding: 8px 14px; border-radius: 8px; transition: all .2s;
+  position: relative;
+} */
+/* nav.scrolled .nav-links a { color: var(--text-soft); }
+.nav-links a:hover { color: var(--sky); background: rgba(46,134,222,.08); }
+.nav-cta {
+  margin-left: 8px; background: var(--accent) !important; color: var(--navy) !important;
+  font-weight: 700 !important; padding: 10px 22px !important;
+  box-shadow: 0 4px 16px rgba(232,160,32,.35);
+  border-radius: 9px !important;
+}
+.nav-cta:hover { background: var(--accent-light) !important; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(232,160,32,.4) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border-radius: 8px; }
+.hamburger span { width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: .3s; display: block; }
+nav.scrolled .hamburger span { background: var(--navy); } */
+.mob-nav {
+  display: none; position: fixed; top: 72px; left: 0; right: 0;
+  background: rgba(255,255,255,.98); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border); box-shadow: var(--shadow-lg);
+  z-index: 999; flex-direction: column; padding: 12px 24px 20px;
+}
+.mob-nav.open { display: flex; }
+.mob-nav a { font-family: 'Barlow', sans-serif; font-weight: 500; font-size: 15px; color: var(--text); text-decoration: none; padding: 13px 0; border-bottom: 1px solid var(--gray-100); transition: color .2s; }
+.mob-nav a:last-child { border-bottom: none; }
+.mob-nav a:hover { color: var(--sky); }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh; position: relative; overflow: hidden;
+  display: flex; align-items: center; padding-top: 72px;
+  background: linear-gradient(145deg, #03101f 0%, #071d3d 35%, #0c2d60 65%, #071e3e 100%);
+}
+.hero-dots {
+  position: absolute; inset: 0; opacity: .045;
+  background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+.hero-lines {
+  position: absolute; inset: 0; opacity: .04;
+  background-image: linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.hero-glow {
+  position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none;
+}
+.glow1 { width: 700px; height: 700px; background: radial-gradient(circle, rgba(46,134,222,.25), transparent 70%); top: -200px; right: -150px; }
+.glow2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(232,160,32,.12), transparent 70%); bottom: -100px; left: -50px; }
+.glow3 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(15,76,154,.3), transparent 70%); top: 30%; left: 40%; }
+.hero-container { max-width: 1360px; margin: 0 auto; padding: 80px clamp(20px,5vw,60px); position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center; }
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(46,134,222,.15); border: 1px solid rgba(46,134,222,.3);
+  border-radius: 100px; padding: 7px 18px; margin-bottom: 28px;
+  font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 600;
+  letter-spacing: 1.2px; text-transform: uppercase; color: #7fc3f7;
+}
+.eyebrow-dot { width: 7px; height: 7px; background: var(--sky); border-radius: 50%; animation: pulse 2.4s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.5)} }
+
+.hero h1 {
+  font-family: 'Outfit', sans-serif; font-weight: 900;
+  font-size: clamp(40px, 5.5vw, 72px); color: #fff;
+  line-height: 1.05; letter-spacing: -2.5px; margin-bottom: 22px;
+}
+.hero h1 .accent-word { color: var(--accent); font-style: italic; }
+.hero h1 .blue-word { color: var(--sky-light); }
+
+.hero-desc {
+  font-size: clamp(16px, 1.5vw, 19px); color: rgba(255,255,255,.65);
+  line-height: 1.75; max-width: 500px; margin-bottom: 38px; font-weight: 300;
+}
+
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
+.btn-hero-primary {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 15px 30px; border-radius: 11px;
+  background: var(--accent); color: var(--navy);
+  font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700;
+  text-decoration: none; border: none; cursor: pointer;
+  box-shadow: 0 8px 28px rgba(232,160,32,.4);
+  transition: all .25s ease; letter-spacing: -.2px;
+}
+.btn-hero-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 12px 36px rgba(232,160,32,.5); }
+.btn-hero-secondary {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 15px 30px; border-radius: 11px;
+  border: 1.5px solid rgba(255,255,255,.25); color: rgba(255,255,255,.9);
+  font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 600;
+  text-decoration: none; cursor: pointer; background: rgba(255,255,255,.06);
+  transition: all .25s ease; backdrop-filter: blur(8px);
+}
+.btn-hero-secondary:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.5); transform: translateY(-2px); }
+
+.hero-stats { display: flex; gap: 36px; }
+.hstat { position: relative; padding-left: 20px; }
+.hstat::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--sky), var(--accent)); border-radius: 2px; }
+.hstat-num { font-family: 'Outfit', sans-serif; font-size: 34px; font-weight: 900; color: #fff; letter-spacing: -1.5px; line-height: 1; }
+.hstat-label { font-size: 12px; color: rgba(255,255,255,.5); font-weight: 400; letter-spacing: .5px; margin-top: 4px; }
+
+/* hero visual */
+.hero-visual { display: flex; flex-direction: column; gap: 14px; }
+.hv-card {
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--r-lg); padding: 28px; backdrop-filter: blur(12px);
+}
+.hv-card-title { font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 16px; }
+.pill-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+.hv-pill {
+  padding: 6px 15px; border-radius: 100px; font-family: 'Barlow', sans-serif;
+  font-size: 12.5px; font-weight: 500; cursor: default;
+  transition: all .2s;
+}
+.hv-pill.blue { background: rgba(46,134,222,.2); border: 1px solid rgba(46,134,222,.35); color: #89c5f8; }
+.hv-pill.gold { background: rgba(232,160,32,.15); border: 1px solid rgba(232,160,32,.3); color: #f7c964; }
+.hv-pill:hover { transform: translateY(-1px) scale(1.03); }
+
+.hv-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.hv-mini {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--r); padding: 20px 16px; text-align: center; backdrop-filter: blur(8px);
+  transition: all .3s;
+}
+.hv-mini:hover { background: rgba(255,255,255,.08); border-color: rgba(46,134,222,.3); }
+.hv-mini-icon { font-size: 26px; margin-bottom: 8px; }
+.hv-mini-text { font-size: 12.5px; color: rgba(255,255,255,.6); font-weight: 400; }
+
+/* ─── SECTION COMMONS ─── */
+section { padding: clamp(70px, 8vw, 110px) 0; }
+.container { max-width: 1360px; margin: 0 auto; padding: 0 clamp(20px,5vw,60px); }
+.eyebrow-dark {
+  display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px;
+  font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--sky);
+}
+.eyebrow-dark::before { content: ''; width: 28px; height: 2px; background: var(--sky); border-radius: 2px; }
+h2.stitle {
+  font-family: 'Outfit', sans-serif; font-weight: 800;
+  font-size: clamp(30px, 4vw, 48px); color: var(--navy);
+  line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 14px;
+}
+.stitle em { font-style: normal; color: var(--sky); }
+.sdesc { font-size: 17px; color: var(--text-soft); line-height: 1.75; max-width: 580px; font-weight: 300; }
+.section-head { margin-bottom: 56px; }
+.section-head.center { text-align: center; }
+.section-head.center .sdesc { margin: 0 auto; }
+.section-head.center .eyebrow-dark { justify-content: center; }
+.section-head.center .eyebrow-dark::before { display: none; }
+.section-head.center .eyebrow-dark::after { content: ''; width: 28px; height: 2px; background: var(--sky); border-radius: 2px; }
+
+/* reveal */
+.r { opacity: 0; transform: translateY(32px); transition: opacity .75s ease, transform .75s ease; }
+.r.vis { opacity: 1; transform: translateY(0); }
+.r-d1 { transition-delay: .08s; }
+.r-d2 { transition-delay: .16s; }
+.r-d3 { transition-delay: .24s; }
+.r-d4 { transition-delay: .32s; }
+
+/* ─── ABOUT ─── */
+.about { background: var(--off-white); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.about-left { position: relative; }
+.about-box {
+  background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue-mid) 100%);
+  border-radius: var(--r-xl); padding: 44px 40px; color: #fff; position: relative; overflow: hidden;
+}
+.about-box::before {
+  content: ''; position: absolute; top: -60px; right: -60px;
+  width: 220px; height: 220px; border-radius: 50%; background: rgba(255,255,255,.06);
+}
+.about-box::after {
+  content: ''; position: absolute; bottom: -40px; left: -40px;
+  width: 160px; height: 160px; border-radius: 50%; background: rgba(255,255,255,.04);
+}
+.about-box h3 {
+  font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 14px;
+  line-height: 1.25; position: relative; z-index: 1;
+}
+.about-box p { font-size: 15px; opacity: .82; line-height: 1.78; margin-bottom: 30px; font-weight: 300; position: relative; z-index: 1; }
+.about-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; position: relative; z-index: 1; }
+.afact {
+  background: rgba(255,255,255,.12); border-radius: 14px; padding: 18px 16px;
+  border: 1px solid rgba(255,255,255,.1);
+}
+.afact .num { font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 900; color: var(--accent-light); letter-spacing: -1px; }
+.afact .lbl { font-size: 11.5px; opacity: .65; margin-top: 3px; font-weight: 400; letter-spacing: .3px; }
+.about-badge {
+  position: absolute; bottom: -22px; right: -22px;
+  background: var(--accent); color: var(--navy); border-radius: 16px;
+  padding: 18px 22px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 800;
+  box-shadow: 0 8px 28px rgba(232,160,32,.4); text-align: center; line-height: 1.4; z-index: 2;
+}
+.about-right .eyebrow-dark { margin-bottom: 14px; }
+.about-right > p { font-size: 16px; color: var(--text-soft); line-height: 1.82; margin-bottom: 18px; font-weight: 300; }
+.about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+.afeat {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: #fff; padding: 18px; border-radius: var(--r);
+  border: 1px solid var(--border); transition: all .25s;
+}
+.afeat:hover { box-shadow: var(--shadow); border-color: rgba(46,134,222,.2); transform: translateY(-2px); }
+.afeat-icon {
+  width: 42px; height: 42px; background: var(--gray-50); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;
+  border: 1px solid var(--border-light);
+}
+.afeat-body strong { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 700; color: var(--navy); display: block; margin-bottom: 3px; }
+.afeat-body span { font-size: 12.5px; color: var(--gray-400); line-height: 1.5; }
+
+/* ─── PRODUCTS ─── */
+.products { background: var(--white); }
+.prod-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 44px; }
+.ptab {
+  padding: 9px 22px; border-radius: 100px;
+  border: 1.5px solid var(--gray-200); background: #fff;
+  font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 600; color: var(--gray-600);
+  cursor: pointer; transition: all .22s;
+}
+.ptab.active, .ptab:hover { background: var(--blue); border-color: var(--blue); color: #fff; box-shadow: 0 4px 16px rgba(15,76,154,.25); }
+.prod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.pcard {
+  background: #fff; border-radius: var(--r-lg); border: 1px solid var(--border);
+  overflow: hidden; transition: all .3s cubic-bezier(.34,1.56,.64,1);
+  position: relative;
+}
+.pcard:hover { transform: translateY(-7px); box-shadow: var(--shadow-lg); border-color: rgba(46,134,222,.25); }
+.pcard:hover .pcard-overlay { opacity: 1; }
+.pcard-img {
+  height: 170px; display: flex; align-items: center; justify-content: center;
+  font-size: 54px; position: relative; overflow: hidden;
+}
+.pcard-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(4,22,46,.88), rgba(15,76,154,.88));
+  display: flex; align-items: center; justify-content: center; opacity: 0; transition: .3s;
+}
+.pcard-overlay a {
+  padding: 10px 24px; background: var(--accent); color: var(--navy);
+  border-radius: 9px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 700;
+  text-decoration: none; transition: all .2s;
+}
+.pcard-overlay a:hover { background: var(--accent-light); }
+.pcard-body { padding: 20px 18px; }
+.pcard-cat { font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--sky); margin-bottom: 7px; }
+.pcard-body h3 { font-family: 'Outfit', sans-serif; font-size: 15.5px; font-weight: 700; color: var(--navy); margin-bottom: 7px; line-height: 1.3; letter-spacing: -.3px; }
+.pcard-body p { font-size: 13px; color: var(--gray-400); line-height: 1.65; }
+.bg-r { background: linear-gradient(135deg, #e8f1fb, #ccddf5); }
+.bg-m { background: linear-gradient(135deg, #e4f5e8, #c4e8cc); }
+.bg-s { background: linear-gradient(135deg, #fdf2e2, #fae0aa); }
+.brochure-wrap { text-align: center; margin-top: 48px; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 15px 30px; border-radius: 11px;
+  background: linear-gradient(135deg, var(--blue), var(--sky));
+  color: #fff; font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700;
+  text-decoration: none; border: none; cursor: pointer;
+  box-shadow: 0 8px 24px rgba(15,76,154,.3); transition: all .25s;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(15,76,154,.4); }
+
+/* ─── WHY ─── */
+.why { background: var(--navy); position: relative; overflow: hidden; }
+.why::before {
+  content: ''; position: absolute; inset: 0; opacity: .04;
+  background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.why-glow { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; }
+.wg1 { width: 600px; height: 600px; background: rgba(46,134,222,.15); top: -150px; right: -150px; }
+.wg2 { width: 400px; height: 400px; background: rgba(232,160,32,.08); bottom: -100px; left: 0; }
+.why .eyebrow-dark { color: #7fc3f7; }
+.why .eyebrow-dark::before { background: #7fc3f7; }
+.why .eyebrow-dark::after { background: #7fc3f7; }
+.why h2.stitle { color: #fff; }
+.why .sdesc { color: rgba(255,255,255,.55); }
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; position: relative; z-index: 1; }
+.wcard {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09);
+  border-radius: var(--r-lg); padding: 34px 26px; position: relative; overflow: hidden;
+  transition: all .3s;
+}
+.wcard::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--sky), var(--accent));
+  transform: scaleX(0) translateX(-50%); transition: transform .35s; transform-origin: left;
+}
+.wcard:hover { background: rgba(255,255,255,.07); transform: translateY(-5px); border-color: rgba(46,134,222,.3); box-shadow: 0 16px 48px rgba(4,22,46,.25); }
+.wcard:hover::before { transform: scaleX(1); }
+.wcard-icon {
+  width: 52px; height: 52px; border-radius: 14px; margin-bottom: 20px;
+  background: rgba(46,134,222,.15); border: 1px solid rgba(46,134,222,.2);
+  display: flex; align-items: center; justify-content: center; font-size: 22px;
+}
+.wcard h3 { font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 12px; letter-spacing: -.4px; }
+.wcard p { font-size: 14.5px; color: rgba(255,255,255,.55); line-height: 1.75; font-weight: 300; }
+
+/* ─── COUNTERS ─── */
+.counters {
+  background: linear-gradient(135deg, var(--blue), #1a75e0);
+  padding: clamp(50px, 6vw, 72px) 0; position: relative; overflow: hidden;
+}
+.counters::before {
+  content: ''; position: absolute; inset: 0; opacity: .06;
+  background-image: linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.cnt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; z-index: 1; }
+.citem {
+  text-align: center; padding: 28px 20px;
+  border-right: 1px solid rgba(255,255,255,.15);
+}
+.citem:last-child { border-right: none; }
+.cnum { font-family: 'Outfit', sans-serif; font-size: 54px; font-weight: 900; color: #fff; letter-spacing: -2.5px; display: block; line-height: 1; }
+.clabel { font-size: 13.5px; color: rgba(255,255,255,.7); font-weight: 400; margin-top: 8px; letter-spacing: .3px; }
+
+/* ─── INDUSTRIES ─── */
+.industries { background: var(--off-white); }
+.ind-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.icard {
+  background: #fff; border-radius: var(--r-lg); border: 1px solid var(--border);
+  padding: 32px 18px; text-align: center; transition: all .3s cubic-bezier(.34,1.2,.64,1); cursor: default;
+}
+.icard:hover { background: var(--blue); border-color: var(--blue); transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.icard:hover .iicon { background: rgba(255,255,255,.15); }
+.icard:hover h3, .icard:hover p { color: #fff; }
+.iicon {
+  width: 62px; height: 62px; background: var(--gray-50); border-radius: 16px;
+  margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;
+  font-size: 26px; transition: background .3s; border: 1px solid var(--border);
+}
+.icard h3 { font-family: 'Outfit', sans-serif; font-size: 14.5px; font-weight: 700; color: var(--navy); margin-bottom: 7px; transition: color .3s; letter-spacing: -.3px; }
+.icard p { font-size: 12px; color: var(--gray-400); line-height: 1.55; transition: color .3s; font-weight: 300; }
+
+/* ─── GALLERY ─── */
+.gallery { background: var(--white); }
+.gal-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 210px; gap: 16px;
+}
+.gitem {
+  border-radius: var(--r-lg); overflow: hidden; position: relative;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 52px; cursor: pointer; transition: all .35s;
+}
+.gitem:hover { box-shadow: var(--shadow-xl); }
+.gitem:hover .glabel { transform: translateY(0); opacity: 1; }
+.gitem:hover .gitem-inner { transform: scale(1.04); }
+.gitem-inner { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 52px; transition: transform .4s; }
+.gitem.span2 { grid-column: span 2; }
+.gitem.tall { grid-row: span 2; }
+.glabel {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
+  background: linear-gradient(transparent, rgba(4,22,46,.85));
+  color: #fff; padding: 28px 18px 16px;
+  font-family: 'Outfit', sans-serif; font-size: 13.5px; font-weight: 600;
+  transform: translateY(8px); opacity: 0; transition: all .3s;
+}
+
+/* ─── TESTIMONIALS ─── */
+.testimonials { background: var(--off-white); }
+.test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.tcard {
+  background: #fff; border-radius: var(--r-lg); padding: 34px 28px;
+  border: 1px solid var(--border); position: relative; transition: all .3s;
+  overflow: hidden;
+}
+.tcard::before {
+  content: '"'; font-family: 'DM Serif Display', serif; font-size: 100px; color: var(--gray-100);
+  position: absolute; top: 10px; right: 20px; line-height: 1;
+  font-style: italic;
+}
+.tcard:hover { box-shadow: var(--shadow-lg); transform: translateY(-6px); border-color: rgba(46,134,222,.2); }
+.tcard-accent { height: 3px; background: linear-gradient(90deg, var(--sky), var(--accent)); border-radius: 0 0 3px 3px; position: absolute; top: 0; left: 0; right: 0; transform: scaleX(0); transition: transform .35s; transform-origin: left; }
+.tcard:hover .tcard-accent { transform: scaleX(1); }
+.stars { color: var(--accent); font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
+.tcard > p { font-size: 15px; color: var(--text-soft); line-height: 1.82; margin-bottom: 22px; font-style: italic; font-weight: 300; position: relative; z-index: 1; }
+.tauthor { display: flex; align-items: center; gap: 13px; }
+.tavatar {
+  width: 46px; height: 46px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-deep), var(--sky));
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 15px; flex-shrink: 0;
+}
+.tinfo strong { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 700; color: var(--navy); display: block; letter-spacing: -.2px; }
+.tinfo span { font-size: 12.5px; color: var(--gray-400); }
+
+/* ─── CONTACT ─── */
+.contact { background: var(--white); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.35fr; gap: 64px; align-items: start; }
+.cinfo h2 { margin-bottom: 18px; }
+.cinfo > p { font-size: 16px; color: var(--text-soft); line-height: 1.8; margin-bottom: 36px; font-weight: 300; }
+.citems { display: flex; flex-direction: column; gap: 18px; }
+.citem-row { display: flex; gap: 16px; align-items: flex-start; }
+.citem-icon {
+  width: 48px; height: 48px; background: var(--gray-50); border-radius: 13px;
+  border: 1px solid var(--border); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 20px;
+}
+.citem-body strong { font-family: 'Outfit', sans-serif; font-size: 13.5px; font-weight: 700; color: var(--navy); display: block; margin-bottom: 3px; }
+.citem-body span, .citem-body a { font-size: 14px; color: var(--text-soft); text-decoration: none; line-height: 1.6; font-weight: 300; }
+.citem-body a:hover { color: var(--sky); }
+.map-placeholder {
+ margin-top: 40px;
+}
+.cform-wrap {
+  background: var(--off-white); border-radius: var(--r-xl); padding: 44px 40px;
+  border: 1px solid var(--border-light);
+}
+.cform-wrap h3 { font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 28px; letter-spacing: -.5px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.fg { margin-bottom: 16px; }
+.fg label { font-family: 'Barlow', sans-serif; font-size: 12.5px; font-weight: 600; color: var(--navy); display: block; margin-bottom: 7px; letter-spacing: .3px; }
+.fg input, .fg select, .fg textarea {
+  width: 100%; padding: 13px 15px;
+  border: 1.5px solid var(--gray-200); border-radius: 10px;
+  font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--text);
+  background: #fff; outline: none; transition: all .2s; appearance: none;
+}
+.fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--sky); box-shadow: 0 0 0 3px rgba(46,134,222,.1); }
+.fg textarea { height: 108px; resize: vertical; }
+.btn-submit {
+  width: 100%; padding: 16px; border: none; border-radius: 11px;
+  background: linear-gradient(135deg, var(--blue), var(--sky));
+  color: #fff; font-family: 'Outfit', sans-serif;
+  font-size: 16px; font-weight: 700; cursor: pointer;
+  box-shadow: 0 8px 24px rgba(15,76,154,.3); transition: all .25s; letter-spacing: -.3px;
+}
+.btn-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(15,76,154,.4); }
+
+/* ─── FOOTER ─── */
+footer {
+  background: linear-gradient(145deg, #03101f 0%, #071d3d 100%);
+  color: rgba(255,255,255,.65); padding: 72px 0 0;
+}
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.1fr; gap: 48px; margin-bottom: 52px; }
+.fbrand .logo { margin-bottom: 18px; }
+.fbrand .logo-text-block strong { color: #fff; }
+.fbrand .logo-text-block span { color: rgba(255,255,255,.4); }
+.fbrand > p { font-size: 14px; line-height: 1.85; max-width: 280px; font-weight: 300; }
+.socials { display: flex; gap: 10px; margin-top: 24px; }
+.sbtn {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+  display: flex; align-items: center; justify-content: center; font-size: 14px;
+  text-decoration: none; color: rgba(255,255,255,.65); transition: all .22s;
+}
+.sbtn:hover { background: var(--sky); color: #fff; transform: translateY(-2px); }
+footer h4 { font-family: 'Outfit', sans-serif; font-size: 13.5px; font-weight: 700; color: #fff; margin-bottom: 20px; letter-spacing: .3px; }
+footer ul { list-style: none; }
+footer ul li { margin-bottom: 11px; }
+footer ul li a { font-size: 14px; color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s; font-weight: 300; }
+footer ul li a:hover { color: #fff; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.07); padding: 24px 0;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+}
+.footer-bottom p { font-size: 13px; font-weight: 300; }
+.footer-bottom a { color: var(--sky); text-decoration: none; }
+
+/* ─── WA FLOAT ─── */
+.wa-float {
+  position: fixed; bottom: 28px; right: 28px; z-index: 999;
+  width: 58px; height: 58px; border-radius: 50%; background: #25d366;
+  color: #fff; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 28px rgba(37,211,102,.45); text-decoration: none; font-size: 27px;
+  animation: waBounce 2.8s ease-in-out infinite; transition: transform .2s;
+}
+.wa-float:hover { transform: scale(1.12) !important; animation: none; }
+@keyframes waBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1140px) {
+  .prod-grid { grid-template-columns: repeat(3, 1fr); }
+  .ind-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+@media (max-width: 980px) {
+  .hero-container { grid-template-columns: 1fr; gap: 0; }
+  .hero-visual { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .test-grid { grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 44px; }
+  .cnt-grid { grid-template-columns: repeat(2, 1fr); }
+  .prod-grid { grid-template-columns: repeat(2, 1fr); }
+  .gal-grid { grid-template-columns: 1fr 1fr; }
+  .gitem.span2 { grid-column: span 1; }
+}
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero h1 { font-size: 36px; letter-spacing: -1.5px; }
+  .hero-stats { gap: 20px; }
+  .about-features { grid-template-columns: 1fr; }
+  .about-facts { grid-template-columns: 1fr 1fr; }
+  .prod-grid { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .ind-grid { grid-template-columns: repeat(2, 1fr); }
+  .test-grid { grid-template-columns: 1fr; }
+  .cnt-grid { grid-template-columns: 1fr 1fr; }
+  .citem { border-right: none; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .citem:last-child { border-bottom: none; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .cform-wrap { padding: 28px 20px; }
+  .form-row { grid-template-columns: 1fr; }
+  .gal-grid { grid-template-columns: 1fr; }
+  .gitem.tall { grid-row: span 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="pre-logo">Asian Mag <span>Exim</span></div>
+  <div class="pre-sub">Industrial Excellence Since 2005</div>
+  <div class="pre-bar"><div class="pre-bar-fill"></div></div>
+</div>
+
+<!-- SCROLL PROGRESS -->
+<div id="progress"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <div class="logo-mark">AME</div>
+      <div class="logo-text-block">
+        <strong>Asian Mag Exim Inc</strong>
+        <span>Est. 2005 &bull; India</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#why">Why Us</a>
+      <a href="#industries">Industries</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact" class="nav-cta">Contact Us</a>
+    </div>
+    <div class="hamburger" id="ham" onclick="toggleMob()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="mob-nav" id="mobNav">
+  <a href="#home" onclick="toggleMob()">Home</a>
+  <a href="#about" onclick="toggleMob()">About</a>
+  <a href="#products" onclick="toggleMob()">Products</a>
+  <a href="#why" onclick="toggleMob()">Why Choose Us</a>
+  <a href="#industries" onclick="toggleMob()">Industries</a>
+  <a href="#gallery" onclick="toggleMob()">Gallery</a>
+  <a href="#contact" onclick="toggleMob()">Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-dots"></div>
+  <div class="hero-lines"></div>
+  <!-- rsin -->
+  <div class="hero-bg-orb orb1"></div>
+  <div class="hero-bg-orb orb2"></div>
+  <div class="hero-bg-orb orb3"></div>
+  <div class="hero-grid-glow"></div>
+  <div class="hero-noise"></div>
+  <div class="rain"></div>
+  <!-- rain  -->
+  <div class="hero-glow glow1"></div>
+  <div class="hero-glow glow2"></div>
+  <div class="hero-glow glow3"></div>
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        Global Manufacturer &amp; Exporter
+      </div>
+      <h1>
+        Asian Mag<br>
+        <span class="blue-word">Exim</span> <span class="accent-word">Inc</span>
+      </h1>
+      <p class="hero-desc">
+        Trusted Manufacturer, Exporter &amp; Supplier of Industrial Mineral and Steel Plant Products — delivering quality to markets across 30+ countries worldwide.
+      </p>
+      <div class="hero-btns">
+        <a href="#products" class="btn-hero-primary">&#127970; Explore Products</a>
+        <a href="#contact" class="btn-hero-secondary">&#9993; Contact Us</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat">
+          <div class="hstat-num" data-target="500" data-suffix="+">0</div>
+          <div class="hstat-label">Happy Clients</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num" data-target="20" data-suffix="+">0</div>
+          <div class="hstat-label">Years Experience</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num" data-target="30" data-suffix="+">0</div>
+          <div class="hstat-label">Countries Served</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hv-card">
+        <div class="hv-card-title">&#9883; Our Product Range</div>
+        <div class="pill-wrap">
+          <span class="hv-pill blue">Refractory Bricks</span>
+          <span class="hv-pill blue">Dead Burnt Magnesite</span>
+          <span class="hv-pill gold">Spray Mass</span>
+          <span class="hv-pill blue">Dunite</span>
+          <span class="hv-pill gold">Ramming Mass</span>
+          <span class="hv-pill blue">Olivine Sand</span>
+          <span class="hv-pill blue">MgO Powder</span>
+          <span class="hv-pill gold">Patching Mass</span>
+          <span class="hv-pill blue">Caustic Calcined Magnesite</span>
+          <span class="hv-pill gold">Gunning Mass</span>
+        </div>
+      </div>
+      <div class="hv-row">
+        <div class="hv-mini">
+          <div class="hv-mini-icon">&#127959;</div>
+          <div class="hv-mini-text">Refractory Products</div>
+        </div>
+        <div class="hv-mini">
+          <div class="hv-mini-icon">&#9879;</div>
+          <div class="hv-mini-text">Magnesium Sulphate</div>
+        </div>
+        <div class="hv-mini">
+          <div class="hv-mini-icon">&#127981;</div>
+          <div class="hv-mini-text">Steel Plant Materials</div>
+        </div>
+        <div class="hv-mini">
+          <div class="hv-mini-icon">&#127758;</div>
+          <div class="hv-mini-text">Global Export Ready</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-left r">
+        <div class="about-box">
+          <h3>Asian Mag Exim Inc — A Premier Industrial Enterprise</h3>
+          <p>Specializing in high-performance refractory and mineral products for global industries since 2005. Built on trust, quality, and two decades of industrial expertise.</p>
+          <div class="about-facts">
+            <div class="afact"><div class="num">500+</div><div class="lbl">Satisfied Clients</div></div>
+            <div class="afact"><div class="num">20+</div><div class="lbl">Years Expertise</div></div>
+            <div class="afact"><div class="num">30+</div><div class="lbl">Countries</div></div>
+            <div class="afact"><div class="num">100%</div><div class="lbl">Quality Assured</div></div>
+          </div>
+        </div>
+        <div class="about-badge">&#9989; ISO Certified<br>Manufacturer</div>
+      </div>
+      <div class="about-right r r-d1">
+        <div class="eyebrow-dark">About Us</div>
+        <h2 class="stitle">Industrial <em>Excellence</em><br>Since 2005</h2>
+        <p>Asian Mag Exim Inc is a reputed manufacturer, exporter, and import supplier headquartered in India, specializing in premium-grade refractory minerals, magnesium sulphate products, and steel plant consumables.</p>
+        <p>We combine over two decades of industrial expertise with rigorous quality standards to deliver products that meet global specifications. Our supply chain serves steel plants, foundries, and mineral processing units across Asia, Europe, the Middle East, and beyond.</p>
+        <div class="about-features">
+          <div class="afeat">
+            <div class="afeat-icon">&#127981;</div>
+            <div class="afeat-body"><strong>Advanced Manufacturing</strong><span>State-of-the-art production facilities</span></div>
+          </div>
+          <div class="afeat">
+            <div class="afeat-icon">&#127758;</div>
+            <div class="afeat-body"><strong>Global Exports</strong><span>Trusted across 30+ countries worldwide</span></div>
+          </div>
+          <div class="afeat">
+            <div class="afeat-icon">&#9989;</div>
+            <div class="afeat-body"><strong>Quality Assured</strong><span>ISO-certified manufacturing processes</span></div>
+          </div>
+          <div class="afeat">
+            <div class="afeat-icon">&#129309;</div>
+            <div class="afeat-body"><strong>Long-term Partnerships</strong><span>Trusted by global industry leaders</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-head center r">
+      <div class="eyebrow-dark">Our Products</div>
+      <h2 class="stitle">Comprehensive <em>Product</em> Range</h2>
+      <p class="sdesc">From refractory minerals to steel plant consumables — everything engineered for high-performance industrial applications.</p>
+    </div>
+    <div class="prod-tabs r">
+      <button class="ptab active" onclick="filterProds('all',this)">All Products</button>
+      <button class="ptab" onclick="filterProds('refractory',this)">Refractory Products</button>
+      <button class="ptab" onclick="filterProds('magnesium',this)">Magnesium Sulphate</button>
+      <button class="ptab" onclick="filterProds('steel',this)">Steel Plant Products</button>
+    </div>
+    <div class="prod-grid" id="prodGrid">
+      <!-- Refractory -->
+      <div class="pcard r" data-cat="refractory">
+        <div class="pcard-img bg-r">
+          <img src="pics/refractory.jpg" height="250px" width="270px"> 
+          <div class="pcard-overlay"><a href="#contact">Enquire Now</a></div></div>
+        <div class="pcard-body"><div class="pcard-cat">Refractory</div><h3>Refractory Bricks</h3><p>High-temperature resistant bricks for industrial furnaces, kilns and ladles.</p></div>
+      </div>
+      <div class="pcard r r-d1" data-cat="refractory">
+        <div class="pcard-img bg-r">
+          <img src="pics/dead-burnt-magnesite.jpg"> 
+          <div class="pcard-overlay"><a href="#contact">Enquire Now</a></div></div>
+        <div class="pcard-body"><div class="pcard-cat">Refractory</div><h3>Dead Burnt Magnesite</h3><p>Premium grade DBM for basic refractory linings in steel furnaces.</p></div>
+      </div>
+      <div class="pcard r r-d2" data-cat="refractory">
+        <div class="pcard-img bg-r">
+          <img src="pics/dunite.jpg" height="200px" width="275px">
+          <div class="pcard-overlay"><a href="#contact">Enquire Now</a></div></div>
+        <div class="pcard-body"><div class="pcard-cat">Refractory</div><h3>Dunite</h3><p>Natural forsterite-rich mineral for refractory and foundry applications.</p></div>
+      </div>
+      <div class="pcard r r-d3" data-cat="refractory">
+        <div class="pcard-img bg-r">
+          <img src="pics/olivine.jpg" height="200px" width="275px">
+          <div class="pcard-overlay"><a href="#contact">Enquire Now</a></div></div>
+        <div class="pcard-body"><div class="pcard-cat">Refractory</div><h3>Olivine Sand</h3><p>High-density olivine sand for foundry moulding and thermal insulation.</p></div>
+      </div>
+      <!-- Magnesium -->
+      <div class="pcard r" data-cat="magnesium">
+        <div class="pcard-img bg-m">
+          <img src="pics/magnesiumoxide.jpg" height="200px" width="270px">
+          <div class="pcard-overlay"><a href="#contact">Enquire Now</a></div></div>
+        <div class="pcard-body"><div class="pcard-cat">Magnesium Sulphate</div><h3>Magnesium Oxide</h3><p>Industrial grade MgO powder for chemical, agricultural and refractory sectors.</p></div>
+      </div>
+      <div class="pcard r r-d1" data-cat="magnesium">
+        <div class="pcard-img bg-m">
+          <img src="pics/lightly-calcined-magnesite-powder.jpg" height="200px" width="275px">
+          <div class="pcard-overlay"><a href="#contact">Enquire Now</a></div></div>
+        <div class="pcard-body"><div class="pcard-cat">Magnesium Sulphate</div><h3>Light Calcined Magnesite</h3><p>Reactive MgO with high surface area for rubber, chemical and pharma industries.</p></div>
+      </div>
+      <div class="pcard r r-d2" data-cat="magnesium">
+        <div class="pcard-img bg-m">
+          <img src="pics/caustic-calcined-magnesite.jpg" height="200px" width="275px">
+          <div class="pcard-overlay"><a href="#contact">Enquire Now</a></div></div>
+        <div class="pcard-body"><div class="pcard-cat">Magnesium Sulphate</div><h3>Caustic Calcined Magnesite</h3><p>High-purity CCM for water treatment, construction and environmental use.</p></div>
+      </div>
+      <!-- Steel -->
+      <div class="pcard r" data-cat="steel">
+        <div class="pcard-img bg-s">
+          <img src="pics/spray-mass.jpg" height="200px" width="275px">
+          <div class="pcard-overlay"><a href="#contact">Enquire Now</a></div></div>
+        <div class="pcard-body"><div class="pcard-cat">Steel Plant</div><h3>Spray Mass</h3><p>Gunite/spray-applied refractory for ladle and BOF furnace repairs.</p></div>
+      </div>
+      <div class="pcard r r-d1" data-cat="steel">
+        <div class="pcard-img bg-s">
+          <img src="pics/patchingmass.jpg" height="200px" width="270px">
+          <div class="pcard-overlay"><a href="#contact">Enquire Now</a></div></div>
+        <div class="pcard-body"><div class="pcard-cat">Steel Plant</div><h3>Patching Mass</h3><p>Trowelable mass for hot and cold patching of damaged refractory surfaces.</p></div>
+      </div>
+      <div class="pcard r r-d2" data-cat="steel">
+        <div class="pcard-img bg-s">
+          <img src="pics/ramming powder.jpg" height="200px" width="275px">
+          <div class="pcard-overlay"><a href="#contact">Enquire Now</a></div></div>
+        <div class="pcard-body"><div class="pcard-cat">Steel Plant</div><h3>Ramming Mass</h3><p>Dense refractory mass for induction furnace lining and coreless furnaces.</p></div>
+      </div>
+      <div class="pcard r r-d3" data-cat="steel">
+        <div class="pcard-img bg-s">
+          <img src="pics/gunning-mass.jpg" height="200px" width="275px">
+          <div class="pcard-overlay"><a href="#contact">Enquire Now</a></div></div>
+        <div class="pcard-body"><div class="pcard-cat">Steel Plant</div><h3>Gunning Mass</h3><p>Semi-dry gunning material for fast hot repair of converter linings.</p></div>
+      </div>
+      <div class="pcard r r-d4" data-cat="steel">
+        <div class="pcard-img bg-s">
+          <img src="pics/back-filling-mass.jpg" height="200px" width="276px">
+          <div class="pcard-overlay"><a href="#contact">Enquire Now</a></div></div>
+        <div class="pcard-body"><div class="pcard-cat">Steel Plant</div><h3>Back Filling Mass</h3><p>High-grade backfill material for gap filling in steel plant linings.</p></div>
+      </div>
+    </div>
+    <div class="brochure-wrap r">
+      <a href="#contact" class="btn-primary">&#128196; Download Product Brochure</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="why-glow wg1"></div>
+  <div class="why-glow wg2"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="section-head center r">
+      <div class="eyebrow-dark">Why Choose Us</div>
+      <h2 class="stitle" style="color:#fff;">The Asian Mag Exim <em>Advantage</em></h2>
+      <p class="sdesc">We combine technical excellence, global reach, and unwavering commitment to quality in every product we deliver.</p>
+    </div>
+    <div class="why-grid">
+      <div class="wcard r">
+        <div class="wcard-icon">&#127942;</div>
+        <h3>Premium Quality Products</h3>
+        <p>Every product undergoes rigorous quality control — from raw material sourcing to final dispatch — meeting international industrial standards.</p>
+      </div>
+      <div class="wcard r r-d1">
+        <div class="wcard-icon">&#127760;</div>
+        <h3>Global Export Standards</h3>
+        <p>Our packaging, documentation, and logistics comply with international export regulations for seamless delivery worldwide.</p>
+      </div>
+      <div class="wcard r r-d2">
+        <div class="wcard-icon">&#129309;</div>
+        <h3>Trusted Industrial Supplier</h3>
+        <p>Serving 500+ clients across 30+ countries with a proven track record of reliability and transparency in every transaction.</p>
+      </div>
+      <div class="wcard r r-d3">
+        <div class="wcard-icon">&#128666;</div>
+        <h3>Timely Delivery</h3>
+        <p>Our robust supply chain and logistics network ensure on-time delivery — minimising downtime for your operations.</p>
+      </div>
+      <div class="wcard r r-d1">
+        <div class="wcard-icon">&#128119;</div>
+        <h3>Experienced Expert Team</h3>
+        <p>Our engineers and product specialists bring over two decades of domain expertise to guide your procurement decisions.</p>
+      </div>
+      <div class="wcard r r-d2">
+        <div class="wcard-icon">&#128522;</div>
+        <h3>Customer Satisfaction</h3>
+        <p>End-to-end support from enquiry to after-delivery service — we go beyond the transaction to build lasting partnerships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTERS -->
+<div class="counters" id="counters">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="cnt-grid">
+      <div class="citem">
+        <span class="cnum" data-target="500" data-suffix="+">0</span>
+        <div class="clabel">Satisfied Clients Worldwide</div>
+      </div>
+      <div class="citem">
+        <span class="cnum" data-target="20" data-suffix="+">0</span>
+        <div class="clabel">Years of Experience</div>
+      </div>
+      <div class="citem">
+        <span class="cnum" data-target="30" data-suffix="+">0</span>
+        <div class="clabel">Countries Served</div>
+      </div>
+      <div class="citem">
+        <span class="cnum" data-target="12" data-suffix="+">0</span>
+        <div class="clabel">Product Categories</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="container">
+    <div class="section-head center r">
+      <div class="eyebrow-dark">Industries We Serve</div>
+      <h2 class="stitle">Powering Key <em>Industries</em></h2>
+      <p class="sdesc">Our products are trusted across a diverse range of high-demand industrial sectors globally.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="icard r"><div class="iicon">&#127959;</div><h3>Steel Plants</h3><p>BOF, EAF, ladle &amp; tundish refractory solutions</p></div>
+      <div class="icard r r-d1"><div class="iicon">&#9881;</div><h3>Foundries</h3><p>Induction furnace lining &amp; casting materials</p></div>
+      <div class="icard r r-d2"><div class="iicon">&#128293;</div><h3>Refractory Industries</h3><p>Raw materials for refractory brick manufacturing</p></div>
+      <div class="icard r r-d3"><div class="iicon">&#9935;</div><h3>Mineral Processing</h3><p>High-grade minerals for processing plants</p></div>
+      <div class="icard r r-d4"><div class="iicon">&#127981;</div><h3>Manufacturing</h3><p>Industrial consumables for large-scale manufacturing</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-head center r">
+      <div class="eyebrow-dark">Gallery</div>
+      <h2 class="stitle">Products &amp; <em>Facilities</em></h2>
+      <p class="sdesc">A glimpse into our manufacturing excellence and export-ready product packaging.</p>
+    </div>
+    <div class="gal-grid r">
+      <div class="gitem span2" style="background:linear-gradient(135deg,#0a2d5e,#1a69d1);">
+        <div class="gitem-inner">&#127981;</div>
+        <div class="glabel">Manufacturing Facility</div>
+      </div>
+      <div class="gitem tall" style="background:linear-gradient(135deg,#073d20,#1a8a42);">
+        <div class="gitem-inner">&#9935;</div>
+        <div class="glabel">Raw Mineral Extraction</div>
+      </div>
+      <div class="gitem" style="background:linear-gradient(135deg,#4a2000,#a04a00);">
+        <div class="gitem-inner">&#129521;</div>
+        <div class="glabel">Refractory Bricks</div>
+      </div>
+      <div class="gitem" style="background:linear-gradient(135deg,#071a40,#0f4c9a);">
+        <div class="gitem-inner">&#128230;</div>
+        <div class="glabel">Export Packaging</div>
+      </div>
+      <div class="gitem" style="background:linear-gradient(135deg,#0a3a1a,#1a6a2a);">
+        <div class="gitem-inner">&#128300;</div>
+        <div class="glabel">Quality Testing Lab</div>
+      </div>
+      <div class="gitem" style="background:linear-gradient(135deg,#3a1a00,#7a3a00);">
+        <div class="gitem-inner">&#128674;</div>
+        <div class="glabel">Global Export Logistics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head center r">
+      <div class="eyebrow-dark">Client Testimonials</div>
+      <h2 class="stitle">What Our <em>Clients</em> Say</h2>
+      <p class="sdesc">Trusted by industry leaders across steel, foundry and refractory sectors worldwide.</p>
+    </div>
+    <div class="test-grid">
+      <div class="tcard r">
+        <div class="tcard-accent"></div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Asian Mag Exim Inc has been our go-to supplier for ramming mass for 5 years. Consistent quality, prompt delivery, and excellent customer support — truly a world-class partner.</p>
+        <div class="tauthor">
+          <div class="tavatar">RK</div>
+          <div class="tinfo"><strong>Rajesh Kumar</strong><span>Procurement Head, SteelForge India</span></div>
+        </div>
+      </div>
+      <div class="tcard r r-d1">
+        <div class="tcard-accent"></div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Their Dead Burnt Magnesite quality is exceptional and fully meets our global furnace lining specifications. The export documentation is always flawless — highly recommended!</p>
+        <div class="tauthor">
+          <div class="tavatar">MS</div>
+          <div class="tinfo"><strong>Michael Schneider</strong><span>Operations Director, EuroRefrakt GmbH</span></div>
+        </div>
+      </div>
+      <div class="tcard r r-d2">
+        <div class="tcard-accent"></div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>We have been importing Olivine Sand and Dunite from Asian Mag Exim Inc for our foundry operations in the Middle East. Zero quality complaints in 3 years of business.</p>
+        <div class="tauthor">
+          <div class="tavatar">AH</div>
+          <div class="tinfo"><strong>Ahmed Hassan</strong><span>CEO, Gulf Industrial Minerals</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="cinfo r">
+        <div class="eyebrow-dark">Contact Us</div>
+        <h2 class="stitle">Get In <em>Touch</em><br>With Us</h2>
+        <p>Send us your enquiry and our team will respond within 24 hours with detailed product specifications and pricing.</p>
+        <div class="citems">
+          <div class="citem-row">
+            <div class="citem-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="citem-body"><strong>Address</strong><span>Asian Mag Exim Inc, Industrial Area,<br>Salem, Tamil Nadu, India – 636 001</span></div>
+          </div>
+          <div class="citem-row">
+            <div class="citem-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="citem-body"><strong>Phone</strong><a href="tel:+919876543210">+91 98765 43210</a></div>
+          </div>
+          <div class="citem-row">
+            <div class="citem-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="citem-body"><strong>Email</strong><a href="mailto:info@asianmagexim.com">info@asianmagexim.com</a></div>
+          </div>
+          <div class="citem-row">
+            <div class="citem-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="citem-body"><strong>WhatsApp</strong><a href="https://wa.me/919876543210">+91 98765 43210</a></div>
+          </div>
+        </div>
+        <!-- <div class="map-placeholder">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3906.0245164612884!2d78.0982474750567!3d11.76332378845188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDQ1JzQ4LjAiTiA3OMKwMDYnMDMuMCJF!5e0!3m2!1sen!2sin!4v1779623281302!5m2!1sen!2sin" width="450" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+        </div> -->
+      </div>
+      <div class="cform-wrap r r-d1">
+        <h3>&#128231; Send a Product Enquiry</h3>
+        <div class="form-row">
+          <div class="fg"><label>Full Name *</label><input type="text" placeholder="Your full name"></div>
+          <div class="fg"><label>Company Name</label><input type="text" placeholder="Your company"></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Email Address *</label><input type="email" placeholder="your@email.com"></div>
+          <div class="fg"><label>Phone / WhatsApp</label><input type="tel" placeholder="+91 00000 00000"></div>
+        </div>
+        <div class="fg">
+          <label>Product of Interest</label>
+          <select>
+            <option value="">— Select Product Category —</option>
+            <option>Refractory Bricks</option>
+            <option>Dead Burnt Magnesite</option>
+            <option>Dunite / Olivine Sand</option>
+            <option>Magnesium Oxide (MgO)</option>
+            <option>Light Calcined Magnesite</option>
+            <option>Caustic Calcined Magnesite</option>
+            <option>Spray Mass</option>
+            <option>Patching Mass</option>
+            <option>Ramming Mass</option>
+            <option>Gunning Mass</option>
+            <option>Back Filling Mass</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="fg"><label>Country / Destination</label><input type="text" placeholder="Shipping destination"></div>
+        <div class="fg"><label>Message / Requirement</label><textarea placeholder="Describe your requirement — quantity, grade, specifications…"></textarea></div>
+        <button class="btn-submit" onclick="submitForm()">&#128231; Send Enquiry Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="fbrand">
+        <a href="#home" class="logo">
+          <div class="logo-mark" style="background:rgba(255,255,255,0.12);">AME</div>
+          <div class="logo-text-block"><strong>Asian Mag Exim Inc</strong><span>Trusted Industrial Supplier</span></div>
+        </a>
+        <p style="margin-top:18px;">Manufacturer, Exporter &amp; Supplier of Refractory, Magnesium Sulphate and Steel Plant Products since 2005.</p>
+        <div class="socials">
+          <a href="#" class="sbtn" title="LinkedIn">in</a>
+          <a href="#" class="sbtn" title="Twitter">&#120143;</a>
+          <a href="#" class="sbtn" title="Facebook">f</a>
+          <a href="#" class="sbtn" title="YouTube">&#9654;</a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Products</h4>
+        <ul>
+          <li><a href="#products">Refractory Bricks</a></li>
+          <li><a href="#products">Dead Burnt Magnesite</a></li>
+          <li><a href="#products">Dunite &amp; Olivine Sand</a></li>
+          <li><a href="#products">Magnesium Oxide</a></li>
+          <li><a href="#products">Ramming Mass</a></li>
+          <li><a href="#products">Spray &amp; Gunning Mass</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919876543210">&#128222; +91 98765 43210</a></li>
+          <li><a href="mailto:info@asianmagexim.com">&#9993; info@asianmagexim.com</a></li>
+          <li><a href="#">&#128205; Salem, Tamil Nadu, India</a></li>
+          <li><a href="https://wa.me/919876543210">&#128172; WhatsApp Us</a></li>
+        </ul>
+        <div style="margin-top:22px;">
+          <a href="#contact" class="btn-primary" style="font-size:13px;padding:11px 20px;display:inline-flex;">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Asian Mag Exim Inc. All Rights Reserved.</p>
+      <p>Designed with &#10084; | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/919876543210" class="wa-float" target="_blank" title="Chat on WhatsApp">&#128172;</a>
+
+<script>
+// Preloader
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('preloader').classList.add('fade');
+  }, 2000);
+});
+
+// Nav scroll
+const navbar = document.getElementById('navbar');
+const prog = document.getElementById('progress');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY > 30;
+  navbar.classList.toggle('scrolled', scrolled);
+  const h = document.documentElement;
+  const pct = (h.scrollTop || document.body.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+  prog.style.width = pct + '%';
+});
+
+// Mobile menu
+function toggleMob() {
+  document.getElementById('mobNav').classList.toggle('open');
+}
+
+// Reveal on scroll
+const revEls = document.querySelectorAll('.r');
+const revObs = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add('vis'); revObs.unobserve(e.target); }
+  });
+}, { threshold: 0.08 });
+revEls.forEach(el => revObs.observe(el));
+
+// Counter animation
+function animateNum(el) {
+  const target = +el.dataset.target;
+  const suffix = el.dataset.suffix || '';
+  let current = 0;
+  const duration = 1800;
+  const startTime = performance.now();
+  function update(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    current = Math.floor(eased * target);
+    el.textContent = current + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+    else el.textContent = target + suffix;
+  }
+  requestAnimationFrame(update);
+}
+
+const cntObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      document.querySelectorAll('.cnum').forEach(animateNum);
+      cntObs.disconnect();
+    }
+  });
+}, { threshold: 0.4 });
+const cntSection = document.querySelector('.counters');
+if (cntSection) cntObs.observe(cntSection);
+
+// Hero stats animate
+setTimeout(() => {
+  document.querySelectorAll('.hstat-num').forEach(animateNum);
+}, 2200);
+
+// Product filter
+function filterProds(cat, btn) {
+  document.querySelectorAll('.ptab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.pcard').forEach(c => {
+    const show = cat === 'all' || c.dataset.cat === cat;
+    c.style.display = show ? '' : 'none';
+  });
+}
+
+// Form submit
+function submitForm() {
+  alert('✅ Thank you! Your enquiry has been sent. Our team will contact you within 24 hours.');
+}
+
+// Close mobile menu on outside click
+document.addEventListener('click', (e) => {
+  const mob = document.getElementById('mobNav');
+  const ham = document.getElementById('ham');
+  if (!mob.contains(e.target) && !ham.contains(e.target)) {
+    mob.classList.remove('open');
+  }
+});
+
+// Smooth parallax on hero orbs
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      const scroll = window.pageYOffset;
+      const g1 = document.querySelector('.glow1');
+      const g2 = document.querySelector('.glow2');
+      if (g1) g1.style.transform = `translateY(${scroll * 0.18}px)`;
+      if (g2) g2.style.transform = `translateY(${scroll * 0.09}px)`;
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+/* ── PARALLAX GLOW ORBS ── */
+// let ticking = false;
+// window.addEventListener('scroll', () => {
+//   if (!ticking) {
+//     requestAnimationFrame(() => {
+//       const s = window.pageYOffset;
+//       const g1 = document.querySelector('.glow1');
+//       const g2 = document.querySelector('.glow2');
+//       if (g1) g1.style.transform = `translateY(${s * 0.18}px)`;
+//       if (g2) g2.style.transform = `translateY(${s * 0.09}px)`;
+//       ticking = false;
+//     });
+//     ticking = true;
+//   }
+// });
+
+/* ── PARTICLE CANVAS ── */
+(function() {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  for (let i = 0; i < 55; i++) {
+    particles.push({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      r: Math.random() * 1.8 + 0.3,
+      vx: (Math.random() - 0.5) * 0.35,
+      vy: -(Math.random() * 0.6 + 0.2),
+      alpha: Math.random() * 0.45 + 0.1,
+      life: Math.random()
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.life += 0.004;
+      if (p.y < -5 || p.life > 1) {
+        p.x = Math.random() * W;
+        p.y = H + 5;
+        p.life = 0;
+      }
+      const fade = p.life < 0.15 ? p.life / 0.15 : p.life > 0.85 ? (1 - p.life) / 0.15 : 1;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(91,164,233,${p.alpha * fade})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+const nav = document.getElementById("navbar");
+
+window.addEventListener("load", () => {
+  nav.classList.add("nav-in");
+});
+
+window.addEventListener("scroll", () => {
+  nav.classList.toggle("scrolled", window.scrollY > 20);
+}, { passive:true });
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+function toggleMob(){
+  document.getElementById("mobNav").classList.toggle("open");
+  document.getElementById("ham").classList.toggle("active");
+}
+
+/* =========================================
+   REVEAL ON SCROLL
+========================================= */
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("active","visible");
+      observer.unobserve(entry.target);
+    }
+  });
+},{ threshold:.14 });
+
+document.querySelectorAll(
+  ".reveal,.reveal-left,.reveal-right,.reveal-scale,.afeat"
+).forEach(el=>observer.observe(el));
+
+/* =========================================
+   COUNTER ANIMATION
+========================================= */
+
+document.querySelectorAll(".hstat-num").forEach(counter => {
+
+  const run = () => {
+    const target = +counter.dataset.target;
+    const suffix = counter.dataset.suffix || "";
+    let current = 0;
+
+    const update = () => {
+      current += target / 60;
+
+      if(current < target){
+        counter.innerText =
+          Math.floor(current) + suffix;
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target + suffix;
+      }
+    };
+
+    update();
+  };
+
+  new IntersectionObserver((entries,obs)=>{
+    if(entries[0].isIntersecting){
+      run();
+      obs.disconnect();
+    }
+  },{threshold:.5}).observe(counter);
+
+});
+
+/* =========================================
+   MOUSE GLOW
+========================================= */
+
+const hero = document.querySelector(".hero");
+let raf = null;
+
+hero.addEventListener("mousemove", e => {
+
+  if(raf) return;
+
+  raf = requestAnimationFrame(() => {
+
+    const rect = hero.getBoundingClientRect();
+
+    hero.style.setProperty(
+      "--mx",
+      `${e.clientX - rect.left}px`
+    );
+
+    hero.style.setProperty(
+      "--my",
+      `${e.clientY - rect.top}px`
+    );
+
+    raf = null;
+
+  });
+
+}, { passive:true });
+
+/* =========================================
+   CARD TILT
+========================================= */
+
+document.querySelectorAll(".tilt-card").forEach(card => {
+
+  card.addEventListener("mousemove", e => {
+
+    const r = card.getBoundingClientRect();
+
+    const x = e.clientX - r.left;
+    const y = e.clientY - r.top;
+
+    const rx = -(y - r.height/2) / 18;
+    const ry = (x - r.width/2) / 18;
+
+    card.style.transform =
+      `rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px)`;
+
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "";
+  });
+
+});
+
+// animation 
+if(window.innerWidth > 768){
+
+  const hero = document.querySelector('.hero');
+  const orbs = document.querySelectorAll('.hero-bg-orb');
+
+  let raf = null;
+
+  hero.addEventListener('mousemove', e => {
+
+    if(raf) return;
+
+    raf = requestAnimationFrame(() => {
+
+      const x = (e.clientX / window.innerWidth - 0.5);
+      const y = (e.clientY / window.innerHeight - 0.5);
+
+      orbs.forEach((orb, i) => {
+
+        const speed = (i + 1) * 12;
+
+        orb.style.transform =
+          `translate3d(${x * speed}px, ${y * speed}px, 0)`;
+
+      });
+
+      raf = null;
+
+    });
+
+  }, { passive:true });
+
+}
+
+</script>
+</body>
+</html>
