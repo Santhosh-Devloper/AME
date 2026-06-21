@@ -411,14 +411,49 @@ section{position:relative;}
   .about-stats{flex-wrap:wrap;row-gap:24px;}
   .about-stat{flex:0 0 50%;}
 }
+/* formmmm */
+.contact-form{background:var(--white);padding:56px 48px;display:flex;flex-direction:column;justify-content:center;}
+.contact-form .qc-eyebrow{font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-600);margin-bottom:10px;}
+.contact-form h3{font-size:24px;text-transform:uppercase;color:var(--navy-900);margin-bottom:10px;}
+.contact-form > p.qc-lede{font-size:14.5px;color:var(--gray-500);margin-bottom:34px;line-height:1.65;max-width:420px;}
+:root{
+  --white:#FFFFFF; --navy-900:#0B1F3D; --orange-500:#FF6A1A; --orange-600:#E2570A;
+  --gray-50:#F4F6F9; --gray-100:#E8ECF2; --gray-500:#5C6B82;
+  --radius-lg:4px; --shadow-md:0 14px 34px rgba(7,15,34,.14);
+  --ease:cubic-bezier(.4,0,.2,1);
+  --font-mono:'JetBrains Mono', monospace; --font-display:'Big Shoulders Display', Impact, sans-serif;
+}
 
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.quick-card{
+  background:var(--gray-50);border:1.5px solid var(--gray-100);border-radius:var(--radius-lg);
+  padding:26px 20px;text-align:center;transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease), background .35s var(--ease);
+}
+.quick-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:transparent;background:var(--white);}
+.quick-icon{
+  width:50px;height:50px;border-radius:50%;background:var(--navy-900);margin:0 auto 16px;
+  display:flex;align-items:center;justify-content:center;transition:background .35s var(--ease), transform .35s var(--ease);
+}
+.quick-card:hover .quick-icon{background:var(--orange-500);transform:scale(1.08) rotate(-4deg);}
+.quick-icon svg{width:22px;height:22px;color:var(--white);}
+.quick-title{font-family:var(--font-display);font-weight:800;font-size:15px;text-transform:uppercase;color:var(--navy-900);letter-spacing:.02em;margin-bottom:5px;}
+.quick-sub{font-size:12.5px;color:var(--gray-500);word-break:break-word;}
+
+.response-badge{
+  margin-top:30px;display:flex;align-items:center;justify-content:center;gap:10px;
+  font-size:13px;color:var(--gray-500);padding-top:26px;border-top:1px solid var(--gray-100);
+}
+.response-badge svg{width:17px;height:17px;color:var(--orange-500);flex:none;}
+
+@media (max-width:800px){.contact-grid{grid-template-columns:1fr;}}
+@media (max-width:500px){.contact-info,.contact-form{padding:40px 26px;}.quick-grid{grid-template-columns:1fr 1fr;gap:14px;}.quick-card{padding:20px 14px;}}
 /* ============================================================
    PRODUCTS
    ============================================================ */
 .filter-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px;}
 .filter-btn{
-  padding:11px 22px;border:1.5px solid var(--gray-200);border-radius:99px;font-size:13px;font-weight:700;
-  letter-spacing:.04em;text-transform:uppercase;color:var(--gray-600);transition:all .25s var(--ease);
+  padding:5px 5px;border:1px solid var(--gray-200);border-radius:99px;font-size:12px;font-weight:700;
+  letter-spacing:.02em;text-transform:uppercase;color:var(--gray-600);transition:all .25s var(--ease);
 }
 .filter-btn:hover{border-color:var(--orange-500);color:var(--orange-600);}
 .filter-btn.active{background:var(--navy-900);border-color:var(--navy-900);color:var(--white);}
@@ -704,7 +739,7 @@ section{position:relative;}
 <div class="nav-overlay" id="navOverlay"></div>
 <header class="site-header" id="siteHeader">
   <div class="topbar">
-    <div class="container topbar-inner">
+    <!-- <div class="container topbar-inner">
       <div class="topbar-left">
         <a href="tel:+919876543210">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -726,7 +761,7 @@ section{position:relative;}
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <div class="navbar">
@@ -784,7 +819,7 @@ section{position:relative;}
         </div>
       </div>
     </div>
-    <div class="hero-stats container reveal">
+    <!-- <div class="hero-stats container reveal">
       <div class="hero-stat">
         <div class="num"><span class="counter" data-target="500">0</span><span class="suffix">+</span></div>
         <div class="label">Happy Clients</div>
@@ -797,7 +832,7 @@ section{position:relative;}
         <div class="num"><span class="counter" data-target="30">0</span><span class="suffix">+</span></div>
         <div class="label">Countries Served</div>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -970,7 +1005,7 @@ section{position:relative;}
       </div>
     </div>
 
-    <div class="brochure-cta reveal">
+    <!-- <div class="brochure-cta reveal">
       <div>
         <h3>Need detailed specifications?</h3>
         <p>Download our complete product brochure or speak with our technical team directly.</p>
@@ -978,7 +1013,7 @@ section{position:relative;}
       <a href="#contact" class="btn btn-primary">Download Product Brochure
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
       </a>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -1187,7 +1222,7 @@ section{position:relative;}
               <p class="testi-quote">"Asian Mag Exim Inc has been our go-to supplier for ramming mass for 5 years. Consistent quality, prompt delivery, and excellent customer support — truly a world-class partner."</p>
               <div class="testi-person">
                 <div class="testi-avatar">RK</div>
-                <div><div class="testi-name">Rajesh Kumar</div><div class="testi-role">Procurement Head, SteelForge India</div></div>
+                <div><div class="testi-name">Rajesh Kumar</div><div class="testi-role"></div></div>
               </div>
             </div>
           </div>
@@ -1197,7 +1232,7 @@ section{position:relative;}
               <p class="testi-quote">"Their Dead Burnt Magnesite quality is exceptional and fully meets our global furnace lining specifications. The export documentation is always flawless — highly recommended!"</p>
               <div class="testi-person">
                 <div class="testi-avatar">MS</div>
-                <div><div class="testi-name">Michael Schneider</div><div class="testi-role">Operations Director, EuroRefrakt GmbH</div></div>
+                <div><div class="testi-name">Michael Schneider</div><div class="testi-role"></div></div>
               </div>
             </div>
           </div>
@@ -1207,7 +1242,7 @@ section{position:relative;}
               <p class="testi-quote">"We have been importing Olivine Sand and Dunite from Asian Mag Exim Inc for our foundry operations in the Middle East. Zero quality complaints in 3 years of business."</p>
               <div class="testi-person">
                 <div class="testi-avatar">AH</div>
-                <div><div class="testi-name">Ahmed Hassan</div><div class="testi-role">CEO, Gulf Industrial Minerals</div></div>
+                <div><div class="testi-name">Siddarth Kothari</div><div class="testi-role"></div></div>
               </div>
             </div>
           </div>
@@ -1245,7 +1280,7 @@ section{position:relative;}
         </div>
         <div class="contact-item">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <div><div class="lbl">Phone</div><a class="val" href="tel:+919876543210">+91 98765 43210</a></div>
+          <div><div class="lbl">Phone</div><a class="val" href="tel:+918610485753">+91 8610485753</a></div>
         </div>
         <div class="contact-item">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg></div>
@@ -1253,7 +1288,7 @@ section{position:relative;}
         </div>
         <div class="contact-item">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 3.2z"/></svg></div>
-          <div><div class="lbl">WhatsApp</div><a class="val" href="https://wa.me/919876543210" target="_blank" rel="noopener">+91 98765 43210</a></div>
+          <div><div class="lbl">WhatsApp</div><a class="val" href="https://wa.me/8610485753" target="_blank" rel="noopener">+91 8610485753</a></div>
         </div>
 
         <div class="contact-social">
@@ -1263,8 +1298,40 @@ section{position:relative;}
           <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.6-.46-5.3a3 3 0 0 0-2.1-2.1C18.7 4 12 4 12 4s-6.7 0-8.44.6a3 3 0 0 0-2.1 2.1C1 8.4 1 12 1 12s0 3.6.46 5.3a3 3 0 0 0 2.1 2.1C5.3 20 12 20 12 20s6.7 0 8.44-.6a3 3 0 0 0 2.1-2.1C23 15.6 23 12 23 12zM9.8 15.5v-7l6 3.5z"/></svg></a>
         </div>
       </div>
+<div class="contact-form">
+  <span class="qc-eyebrow">Quick Connect</span>
+  <h3>Reach Us Directly</h3>
+  <p class="qc-lede">No forms, no waiting — tap a card below and we'll be right there. Our team typically replies within 24 hours.</p>
 
-      <div class="contact-form">
+  <div class="quick-grid">
+    <a class="quick-card" href="tel:+918610485753">
+      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+      <div class="quick-title">Call Us</div>
+      <div class="quick-sub">+91 8610485753</div>
+    </a>
+    <a class="quick-card" href="mailto:info@asianmagexim.com">
+      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg></div>
+      <div class="quick-title">Email Us</div>
+      <div class="quick-sub">info@asianmagexim.com</div>
+    </a>
+    <a class="quick-card" href="https://wa.me/918610485753" target="_blank" rel="noopener">
+      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 3.2z"/></svg></div>
+      <div class="quick-title">WhatsApp</div>
+      <div class="quick-sub">Chat instantly</div>
+    </a>
+    <a class="quick-card" href="https://www.google.com/maps/search/?api=1&query=Salem+Tamil+Nadu+India" target="_blank" rel="noopener">
+      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div class="quick-title">Visit Us</div>
+      <div class="quick-sub">Salem, Tamil Nadu</div>
+    </a>
+  </div>
+
+  <div class="response-badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+    We typically respond within 24 hours
+  </div>
+</div>
+      <!-- <div class="contact-form">
         <div class="form-success" id="formSuccess">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
           Thank you — your enquiry has been received. Our team will respond within 24 hours.
@@ -1308,7 +1375,7 @@ section{position:relative;}
           </button>
           <p class="form-note">By submitting, you agree to be contacted regarding your enquiry. We respect your privacy.</p>
         </form>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -1369,7 +1436,7 @@ section{position:relative;}
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+919876543210"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +91 98765 43210</a></li>
+          <li><a href="tel:+918610485753"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +91 8610485753</a></li>
           <li><a href="mailto:info@asianmagexim.com"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg> info@asianmagexim.com</a></li>
           <li><a href="#contact"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Salem, Tamil Nadu, India</a></li>
           <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 3.2z"/></svg> WhatsApp Us</a></li>
@@ -1396,7 +1463,7 @@ section{position:relative;}
   <button class="fab fab-top" id="backToTop" aria-label="Back to top">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
   </button>
-  <a class="fab fab-whatsapp" href="https://wa.me/919876543210" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a class="fab fab-whatsapp" href="https://wa.me/8610485753" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.55 1.36 5.1L2 22l5.13-1.35a9.93 9.93 0 0 0 4.91 1.27h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.83 9.83 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.1.82.83-3.02-.2-.31a8.18 8.18 0 0 1-1.26-4.39c0-4.53 3.69-8.22 8.23-8.22 2.2 0 4.27.86 5.82 2.42a8.17 8.17 0 0 1 2.41 5.82c0 4.53-3.7 8.21-8.24 8.21zm4.51-6.16c-.25-.12-1.46-.72-1.68-.8-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.47-.01-.17 0-.43.06-.66.31-.22.24-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.75 2.67 4.25 3.74.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
   </a>
 </div>
