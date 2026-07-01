@@ -177,7 +177,8 @@ section{position:relative;}
 
 .brand{display:flex;align-items:center;gap:12px;}
 .brand-mark{
-  width:46px;height:46px;flex:none;position:relative;
+
+  width:62px;height:62px;flex:none;position:relative;
   display:flex;align-items:center;justify-content:center;
   transition:transform .35s var(--ease);
 }
@@ -229,6 +230,18 @@ section{position:relative;}
 /* ============================================================
    HERO
    ============================================================ */
+
+   .hero-kicker{
+  display:flex;align-items:center;gap:14px;
+  font-family:var(--font-mono);
+  font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gray-300);margin-bottom:18px;
+}
+.hero-kicker::before{
+  content:"";width:36px;height:1.5px;
+  background:var(--orange-500);
+  display:inline-block;
+}
 .hero{
   min-height:100vh;display:flex;align-items:flex-end;
   color:var(--white);position:relative;overflow:hidden;
@@ -424,10 +437,10 @@ section{position:relative;}
   --font-mono:'JetBrains Mono', monospace; --font-display:'Big Shoulders Display', Impact, sans-serif;
 }
 
-.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.quick-grid{display:grid;grid-template-columns:0.5fr 0.5fr;gap:20px;}
 .quick-card{
-  background:var(--gray-50);border:1.5px solid var(--gray-100);border-radius:var(--radius-lg);
-  padding:26px 20px;text-align:center;transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease), background .35s var(--ease);
+  background:var(--gray-50);border:1px solid var(--gray-100);border-radius:var(--radius-lg);
+  padding:25px 15px;text-align:center;transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease), background .35s var(--ease);
 }
 .quick-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:transparent;background:var(--white);}
 .quick-icon{
@@ -725,6 +738,68 @@ section{position:relative;}
 .counter.counted{animation:counterPop .4s var(--ease);}
 @keyframes counterPop{0%{transform:scale(1);}45%{transform:scale(1.12);}100%{transform:scale(1);}}
 
+ .cc-section { padding: 2rem 2rem; max-width: 1100px; margin: 0 auto; }
+  .cc-eyebrow { font-size: 11px; color: #9ca3af; letter-spacing: .07em; text-transform: uppercase; margin: 0 0 6px; }
+  .cc-title { font-size: 2rem; font-weight: 700; margin: 0 0 8px; }
+  .cc-sub { font-size: 15px; color: #6b7280; max-width: 560px; line-height: 1.6; margin: 0 0 2rem; }
+  .cc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 12px; }
+  .cc-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.25rem; display: flex; flex-direction: column; gap: 10px; transition: border-color .2s; }
+  .cc-card:hover { border-color: #9ca3af; }
+  .cc-icon-box { width: 46px; height: 46px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .cc-label { font-size: 11px; color: #9ca3af; letter-spacing: .05em; text-transform: uppercase; margin: 0; }
+  .cc-val { font-size: 15px; font-weight: 600; color: #111827; margin: 0; }
+  .cc-desc { font-size: 13px; color: #6b7280; line-height: 1.5; margin: 0; }
+  .cc-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; padding: 8px 16px; border-radius: 8px; border: 1px solid #e5e7eb; color: #374151; background: #f9fafb; text-decoration: none; margin-top: auto; width: fit-content; transition: background .15s; }
+  .cc-btn:hover { background: #f3f4f6; border-color: #d1d5db; }
+  .cc-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+  .cc-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .cc-trust { background: #f9fafb; border-radius: 12px; padding: 1.5rem; display: flex; align-items: center; justify-content: space-around; }
+  .cc-divider { width: 1px; height: 36px; background: #e5e7eb; }
+  .cc-stat-num { font-size: 22px; font-weight: 700; color: #111827; margin: 0; text-align: center; }
+  .cc-stat-lbl { font-size: 11px; color: #9ca3af; margin: 0; text-align: center; }
+  .cc-cta-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; }
+  .cc-pill { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 3px 10px; border-radius: 99px; background: #E1F5EE; color: #085041; font-weight: 600; margin-bottom: 8px; }
+  .cc-pill svg { width: 12px; height: 12px; }
+  .cc-cta-title { font-size: 16px; font-weight: 700; color: #111827; margin: 0 0 4px; }
+  .cc-cta-sub { font-size: 13px; color: #6b7280; margin: 0; }
+  .cc-cta-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; padding: 10px 20px; border-radius: 8px; background: #111827; color: #fff; text-decoration: none; align-self: flex-start; margin-top: 12px; }
+  .cc-cta-btn svg { width: 15px; height: 15px; }
+  @media (max-width: 640px) {
+    .cc-grid, .cc-bottom { grid-template-columns: 1fr; }
+  }
+/* .contact-card {
+    background: #fff; */ */
+    /* border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s;
+  }
+  .contact-card:hover { border-color: #9ca3af; }
+  .cc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+    background: #f9fafb;
+    text-decoration: none;
+    margin-top: auto;
+    width: fit-content;
+    transition: background 0.15s;
+  }
+  .cc-btn:hover { background: #f3f4f6; border-color: #d1d5db; }
+  .cc-btn i { font-size: 15px; }
+
+  @media (max-width: 640px) {
+    .contact-card-grid,
+    .contact-bottom-row { grid-template-columns: 1fr !important; }
+  } */
 /* divider clip section */
 .angled-divider{height:64px;background:var(--white);clip-path:polygon(0 100%, 100% 0, 100% 100%);margin-top:-1px;position:relative;z-index:2;}
 </style>
@@ -767,7 +842,7 @@ section{position:relative;}
   <div class="navbar">
     <div class="container navbar-inner">
       <a href="#home" class="brand">
-        <span class="brand-mark">
+        <!-- <span class="brand-mark">
           <svg viewBox="0 0 64 64" fill="none">
             <path d="M32 4 60 18 60 46 32 60 4 46 4 18Z" fill="#0B1F3D" stroke="#FF6A1A" stroke-width="2.5"/>
             <path d="M32 4 60 18 32 32 4 18Z" fill="#142C52"/>
@@ -777,7 +852,30 @@ section{position:relative;}
         <span class="brand-text">
           <span class="b1">Asian Mag Exim</span>
           <span class="b2">Est. 2005 &middot; India</span>
-        </span>
+        </span> -->
+<span class="brand-mark">
+  <svg viewBox="4 -2 56 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="ameFlame" x1="14" y1="2" x2="50" y2="62" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#FF9A5C"/>
+        <stop offset="55%" stop-color="#FF6A1A"/>
+        <stop offset="100%" stop-color="#C6480A"/>
+      </linearGradient>
+      <linearGradient id="ameRing" x1="0" y1="34" x2="64" y2="34" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#FF6A1A" stop-opacity="0"/>
+        <stop offset="50%" stop-color="#FF8A4D"/>
+        <stop offset="100%" stop-color="#FF6A1A" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+
+    <ellipse cx="32" cy="34" rx="33" ry="10.5" fill="none" stroke="url(#ameRing)" stroke-width="3" transform="rotate(-8 32 34)"/>
+
+    <path d="M32 -2c8.3 8.3 13.3 16.6 13.3 25.7 0 8.6-5.9 14.7-13.3 14.7s-13.3-6.1-13.3-14.7c0-4.1 1.5-8.2 4.1-12.1-.4 4.1.9 7.1 3.1 9.5-.9-5.3.9-11.2 6.1-23.1Z" fill="url(#ameFlame)"/>
+    <path d="M32 6c4.1 5.3 6.6 10.2 6.6 15.5 0 5.1-3.1 8.8-6.6 8.8" stroke="#0B1F3D" stroke-width="1.6" stroke-linecap="round" fill="none" opacity=".5"/>
+
+    <text x="32" y="60" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="800" letter-spacing="1.8" fill="#FF6A1A" text-anchor="middle">AME</text>
+  </svg>
+</span>
       </a>
 
       <nav class="nav-links" id="navLinks">
@@ -807,7 +905,8 @@ section{position:relative;}
   <div class="hero-inner">
     <div class="container">
       <div class="hero-content reveal">
-        <span class="hero-eyebrow"><span class="dot"></span>Global Manufacturer &amp; Exporter</span>
+        
+       <p class="hero-kicker">Welcome to</p>
         <h1>Asian Mag<span class="accent">Exim Inc.</span></h1>
         <div class="hero-tagline">Industrial Excellence Since 2005</div>
         <p class="lede">Trusted Manufacturer, Exporter &amp; Supplier of Industrial Mineral and Steel Plant Products — delivering quality to markets across 30+ countries worldwide.</p>
@@ -1152,40 +1251,42 @@ section{position:relative;}
       <p>A glimpse into our manufacturing excellence and export-ready product packaging.</p>
     </div>
     <div class="showcase-grid reveal-stagger stagger-zoom" id="showcaseGrid">
-      <div class="showcase-item" data-cap="Highly Equipped Workers" data-sub="Production Floor" data-img="pics/AME%20(2).jpeg">
+      <div class="showcase-item" data-cap="Highly Equipped Workers" data-sub="Production Floor" data-img="pics/AME1%20(6).jpeg">
         <img src="pics/AME1 (6).jpeg" alt="Highly Equipped Workers">
-        <div class="showcase-overlay"><div class="showcase-cap">Highly Equipped Workers</div><div class="showcase-sub">Production Floor</div></div>
+        <div class="showcase-overlay"><div class="showcase-cap">Highly Equipped Machinery</div><div class="showcase-sub">Production Floor</div></div>
         <div class="showcase-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg></div>
       </div>
-      <div class="showcase-item" data-cap="Raw Material" data-sub="Sourcing &amp; Stock" data-img="pics/AME1%20(8).jpeg">
+      <div class="showcase-item" data-cap="Raw Material" data-sub="Sourcing &amp; Stock" data-img="pics/Cement.jpeg">
         <img src="pics/Cement.jpeg" alt="Raw Material" width="50px" height="50">
-        <div class="showcase-overlay"><div class="showcase-cap">Raw Material</div><div class="showcase-sub">Sourcing &amp; Stock</div></div>
+        <div class="showcase-overlay"><div class="showcase-cap">High Quality Materials</div><div class="showcase-sub">Sourcing &amp; Stock</div></div>
         <div class="showcase-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg></div>
       </div>
-      <div class="showcase-item" data-cap="Highly Equipped Machinery" data-sub="Manufacturing" data-img="pics/AME1%20(6).jpeg">
+      <div class="showcase-item" data-cap="Highly Equipped Machinery" data-sub="Manufacturing" data-img="pics/Fire.jpeg">
         <img src="pics/Fire.jpeg" alt="Highly Equipped Machinery">
-        <div class="showcase-overlay"><div class="showcase-cap">Highly Equipped Machinery</div><div class="showcase-sub">Manufacturing</div></div>
+        <div class="showcase-overlay"><div class="showcase-cap">Quality Working</div><div class="showcase-sub">Manufacturing</div></div>
         <div class="showcase-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg></div>
       </div>
-      <div class="showcase-item" data-cap="Our Company" data-sub="Asian Mag Exim Inc" data-img="pics/AME1%20(7).jpeg">
-        <img src="pics/work.jpeg" alt="Our Company">
-        <div class="showcase-overlay"><div class="showcase-cap">Our Company</div><div class="showcase-sub">Asian Mag Exim Inc</div></div>
+      <div class="showcase-item" data-cap="Our Company" data-sub="Asian Mag Exim Inc" data-img="pics/work.jpeg">
+        <img src="pics/work.jpeg" alt="Machinery">
+        <div class="showcase-overlay"><div class="showcase-cap">Quality Check</div>
+        <div class="showcase-sub">Quality Assurance</div>
+      </div>
         <div class="showcase-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg></div>
       </div>
       <!-- newww -->
-      <div class="showcase-item" data-cap="Our Company" data-sub="Asian Mag Exim Inc" data-img="pics/AME1%20(7).jpeg">
+      <div class="showcase-item" data-cap="Our Company" data-sub="Asian Mag Exim Inc" data-img="pics/quary.jpeg">
         <img src="pics/quary.jpeg" alt="Our Company">
-        <div class="showcase-overlay"><div class="showcase-cap">Our Company</div><div class="showcase-sub">Asian Mag Exim Inc</div></div>
+        <div class="showcase-overlay"><div class="showcase-cap">Mines</div><div class="showcase-sub">Sourcing</div></div>
         <div class="showcase-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg></div>
       </div>
-      <div class="showcase-item" data-cap="Our Company" data-sub="Asian Mag Exim Inc" data-img="pics/AME1%20(7).jpeg">
+      <div class="showcase-item" data-cap="Our Company" data-sub="Asian Mag Exim Inc" data-img="pics/truck.jpeg">
         <img src="pics/truck.jpeg" alt="Our Company">
-        <div class="showcase-overlay"><div class="showcase-cap">Our Company</div><div class="showcase-sub">Asian Mag Exim Inc</div></div>
+        <div class="showcase-overlay"><div class="showcase-cap">Raw materials Transportation</div><div class="showcase-sub">Transportation</div></div>
         <div class="showcase-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg></div>
       </div>
-      <div class="showcase-item" data-cap="Our Company" data-sub="Asian Mag Exim Inc" data-img="pics/AME1%20(7).jpeg">
+      <div class="showcase-item" data-cap="Our Company" data-sub="Asian Mag Exim Inc" data-img="pics/welding.jpeg">
         <img src="pics/welding.jpeg" alt="Our Company">
-        <div class="showcase-overlay"><div class="showcase-cap">Our Company</div><div class="showcase-sub">Asian Mag Exim Inc</div></div>
+        <div class="showcase-overlay"><div class="showcase-cap">Raw Material Processing</div><div class="showcase-sub">Manufacturing</div></div>
         <div class="showcase-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg></div>
       </div>
     </div>
@@ -1265,11 +1366,125 @@ section{position:relative;}
     <div class="section-head center reveal">
       <span class="eyebrow">Contact Us</span>
       <h2>Get In <em>Touch</em> With Us</h2>
-      <p>Send us your enquiry and our team will respond within 24 hours with detailed product specifications and pricing.</p>
+      <!-- <p>Send us your enquiry and our team will respond within 24 hours with detailed product specifications and pricing.</p> -->
+    </div>
+    <div class="cc-section">
+
+  <p class="cc-eyebrow">Export enquiries &amp; support</p>
+  <h2 class="cc-title">Connect with <em>Us</em> Directly</h2>
+  <p class="cc-sub">No forms, no back-and-forth. Reach our export team through your preferred channel — available for bulk enquiries, pricing, and logistics support worldwide.</p>
+
+  <div class="cc-grid">
+
+    <!-- Phone -->
+    <div class="cc-card">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div class="cc-icon-box" style="background:#E1F5EE;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        </div>
+        <div>
+          <p class="cc-label">Phone</p>
+          <p class="cc-val">+91 86104 85753</p>
+        </div>
+      </div>
+      <p class="cc-desc">Speak directly with our export team for specifications, availability, and urgent freight queries.</p>
+      <a href="tel:+918610485753" class="cc-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        Call now
+      </a>
     </div>
 
-    <div class="contact-grid reveal reveal-zoom">
-      <div class="contact-info">
+    <!-- Email -->
+    <div class="cc-card">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div class="cc-icon-box" style="background:#E6F1FB;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        </div>
+        <div>
+          <p class="cc-label">Email</p>
+          <p class="cc-val">info@asianmagexim.com</p>
+        </div>
+      </div>
+      <p class="cc-desc">Send your product requirements, quantity, and destination — we reply with a detailed quote within 24 hours.</p>
+      <a href="mailto:info@asianmagexim.com" class="cc-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9l20-7z"/></svg>
+        Send email
+      </a>
+    </div>
+
+    <!-- WhatsApp -->
+    <div class="cc-card">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div class="cc-icon-box" style="background:#EAF3DE;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10c0 5 6 5 6 0"/></svg>
+        </div>
+        <div>
+          <p class="cc-label">WhatsApp</p>
+          <p class="cc-val">+91 86104 85753</p>
+        </div>
+      </div>
+      <p class="cc-desc">Quickest way to share documents or get instant answers on orders — chat with us right now.</p>
+      <a href="https://wa.me/918610485753" class="cc-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10c0 5 6 5 6 0"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+
+    <!-- Address -->
+    <div class="cc-card">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div class="cc-icon-box" style="background:#FAEEDA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#854F0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div>
+          <p class="cc-label">Address</p>
+          <p class="cc-val">Salem, Tamil Nadu</p>
+        </div>
+      </div>
+      <p class="cc-desc">Asian Mag Exim Inc, Industrial Area, Salem, Tamil Nadu, India — 636 001.</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Salem+Tamil+Nadu+India" class="cc-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+        View on map
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Bottom row -->
+  <!-- <div class="cc-bottom">
+
+     Trust stats -->
+    <!-- <div class="cc-trust">
+      <div><p class="cc-stat-num">500+</p><p class="cc-stat-lbl">Clients</p></div>
+      <div class="cc-divider"></div>
+      <div><p class="cc-stat-num">30+</p><p class="cc-stat-lbl">Countries</p></div>
+      <div class="cc-divider"></div>
+      <div><p class="cc-stat-num">20+</p><p class="cc-stat-lbl">Years</p></div>
+      <div class="cc-divider"></div>
+      <div><p class="cc-stat-num">ISO</p><p class="cc-stat-lbl">Certified</p></div>
+    </div> --> 
+
+    <!-- CTA -->
+    <!-- <div class="cc-cta-card">
+      <div>
+        <div class="cc-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Replies within 24 hrs
+        </div>
+        <p class="cc-cta-title">Ready to place a bulk order?</p>
+        <p class="cc-cta-sub">Share your destination, quantity, and product — we'll handle everything from quote to delivery.</p>
+      </div>
+      <a href="mailto:info@asianmagexim.com?subject=Bulk%20Enquiry%20-%20Asian%20Mag%20Exim" class="cc-cta-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        Request a quote
+      </a>
+    </div> -->
+
+  </div>
+</div>
+
+    <!-- <div class="contact-grid reveal reveal-zoom"> -->
+      <!-- <div class="contact-info">
         <div class="grid-texture"></div>
         <h3>Reach Our Team</h3>
         <p>Our export and technical teams are available to discuss specifications, pricing, and logistics for your region.</p>
@@ -1297,8 +1512,8 @@ section{position:relative;}
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
           <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.6-.46-5.3a3 3 0 0 0-2.1-2.1C18.7 4 12 4 12 4s-6.7 0-8.44.6a3 3 0 0 0-2.1 2.1C1 8.4 1 12 1 12s0 3.6.46 5.3a3 3 0 0 0 2.1 2.1C5.3 20 12 20 12 20s6.7 0 8.44-.6a3 3 0 0 0 2.1-2.1C23 15.6 23 12 23 12zM9.8 15.5v-7l6 3.5z"/></svg></a>
         </div>
-      </div>
-<div class="contact-form">
+      </div> -->
+<!-- <div class="contact-form">
   <span class="qc-eyebrow">Quick Connect</span>
   <h3>Reach Us Directly</h3>
   <p class="qc-lede">No forms, no waiting — tap a card below and we'll be right there. Our team typically replies within 24 hours.</p>
@@ -1329,8 +1544,8 @@ section{position:relative;}
   <div class="response-badge">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
     We typically respond within 24 hours
-  </div>
-</div>
+  </div> -->
+<!-- </div> -->
       <!-- <div class="contact-form">
         <div class="form-success" id="formSuccess">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
@@ -1376,6 +1591,125 @@ section{position:relative;}
           <p class="form-note">By submitting, you agree to be contacted regarding your enquiry. We respect your privacy.</p>
         </form>
       </div> -->
+      <!-- <section id="contact" style="padding: 5rem 0;">
+  <div style="max-width: 1100px; margin: 0 auto; padding: 0 2rem;"> -->
+
+    <!-- Section heading (keep your existing styling) -->
+    <!-- <p style="font-size:12px;color:#9ca3af;letter-spacing:.07em;text-transform:uppercase;margin:0 0 6px;">Export enquiries &amp; support</p>
+    <h2 style="font-size:2rem;font-weight:700;margin:0 0 8px;">Connect with <em>Us</em> Directly</h2>
+    <p style="font-size:15px;color:#6b7280;max-width:560px;line-height:1.6;margin:0 0 2rem;">
+      No forms, no back-and-forth. Reach our export team through your preferred channel — available for bulk enquiries, pricing, and logistics support.
+    </p> -->
+
+    <!-- 4-channel grid -->
+    <!-- <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:12px;"> -->
+
+      <!-- Phone -->
+      <!-- <div class="contact-card">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px;">
+          <div style="width:46px;height:46px;border-radius:10px;background:#E1F5EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="ti ti-phone" style="font-size:22px;color:#0F6E56;"></i>
+          </div>
+          <div>
+            <p style="font-size:11px;color:#9ca3af;letter-spacing:.05em;text-transform:uppercase;margin:0;">Phone</p>
+            <p style="font-size:15px;font-weight:600;color:#111827;margin:0;">+91 86104 85753</p>
+          </div>
+        </div>
+        <p style="font-size:13px;color:#6b7280;line-height:1.5;margin:0 0 14px;">Speak directly with our export team for specifications, availability, and urgent freight queries.</p>
+        <a href="tel:+918610485753" class="cc-btn"><i class="ti ti-phone-call"></i> Call now</a>
+      </div> -->
+
+      <!-- Email -->
+      <!-- <div class="contact-card">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px;">
+          <div style="width:46px;height:46px;border-radius:10px;background:#E6F1FB;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="ti ti-mail" style="font-size:22px;color:#185FA5;"></i>
+          </div>
+          <div>
+            <p style="font-size:11px;color:#9ca3af;letter-spacing:.05em;text-transform:uppercase;margin:0;">Email</p>
+            <p style="font-size:15px;font-weight:600;color:#111827;margin:0;">info@asianmagexim.com</p>
+          </div>
+        </div>
+        <p style="font-size:13px;color:#6b7280;line-height:1.5;margin:0 0 14px;">Send your product requirements, quantity, and destination — we reply with a detailed quote within 24 hours.</p>
+        <a href="mailto:info@asianmagexim.com" class="cc-btn"><i class="ti ti-send"></i> Send email</a>
+      </div> -->
+
+      <!-- WhatsApp -->
+      <!-- <div class="contact-card">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px;">
+          <div style="width:46px;height:46px;border-radius:10px;background:#EAF3DE;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="ti ti-brand-whatsapp" style="font-size:22px;color:#3B6D11;"></i>
+          </div>
+          <div>
+            <p style="font-size:11px;color:#9ca3af;letter-spacing:.05em;text-transform:uppercase;margin:0;">WhatsApp</p>
+            <p style="font-size:15px;font-weight:600;color:#111827;margin:0;">+91 86104 85753</p>
+          </div>
+        </div>
+        <p style="font-size:13px;color:#6b7280;line-height:1.5;margin:0 0 14px;">Quickest way to share documents or get instant answers on orders — chat with us right now.</p>
+        <a href="https://wa.me/918610485753" class="cc-btn"><i class="ti ti-message-circle"></i> Chat on WhatsApp</a> -->
+      <!-- </div> -->
+
+      <!-- Address -->
+      <!-- <div class="contact-card">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px;">
+          <div style="width:46px;height:46px;border-radius:10px;background:#FAEEDA;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="ti ti-map-pin" style="font-size:22px;color:#854F0B;"></i>
+          </div>
+          <div>
+            <p style="font-size:11px;color:#9ca3af;letter-spacing:.05em;text-transform:uppercase;margin:0;">Address</p>
+            <p style="font-size:15px;font-weight:600;color:#111827;margin:0;">Salem, Tamil Nadu</p>
+          </div>
+        </div>
+        <p style="font-size:13px;color:#6b7280;line-height:1.5;margin:0 0 14px;">Asian Mag Exim Inc, Industrial Area, Salem, Tamil Nadu, India — 636 001.</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Salem+Tamil+Nadu+India" class="cc-btn"><i class="ti ti-map"></i> View on map</a>
+      </div>
+
+    </div> -->
+
+    <!-- Bottom row: trust stats + CTA -->
+    <!-- <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"> -->
+
+      <!-- Trust stats
+      <div style="background:#f9fafb;border-radius:12px;padding:1.5rem;display:flex;align-items:center;justify-content:space-around;">
+        <div style="text-align:center;">
+          <p style="font-size:22px;font-weight:700;color:#111827;margin:0;">500+</p>
+          <p style="font-size:11px;color:#9ca3af;margin:0;">Clients</p>
+        </div>
+        <div style="width:1px;height:36px;background:#e5e7eb;"></div>
+        <div style="text-align:center;">
+          <p style="font-size:22px;font-weight:700;color:#111827;margin:0;">30+</p>
+          <p style="font-size:11px;color:#9ca3af;margin:0;">Countries</p>
+        </div>
+        <div style="width:1px;height:36px;background:#e5e7eb;"></div>
+        <div style="text-align:center;">
+          <p style="font-size:22px;font-weight:700;color:#111827;margin:0;">20+</p>
+          <p style="font-size:11px;color:#9ca3af;margin:0;">Years</p>
+        </div>
+        <div style="width:1px;height:36px;background:#e5e7eb;"></div>
+        <div style="text-align:center;">
+          <p style="font-size:22px;font-weight:700;color:#111827;margin:0;">ISO</p>
+          <p style="font-size:11px;color:#9ca3af;margin:0;">Certified</p>
+        </div>
+      </div> -->
+
+      <!-- CTA card -->
+      <!-- <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;gap:12px;">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:3px 10px;border-radius:99px;background:#E1F5EE;color:#085041;font-weight:600;margin-bottom:8px;">
+            <i class="ti ti-clock" style="font-size:12px;"></i> Replies within 24 hrs
+          </span>
+          <p style="font-size:16px;font-weight:700;color:#111827;margin:0 0 4px;">Ready to place a bulk order?</p>
+          <p style="font-size:13px;color:#6b7280;margin:0;">Share your destination, quantity, and product — we'll handle the rest from quote to delivery.</p>
+        </div>
+        <a href="mailto:info@asianmagexim.com?subject=Bulk%20Enquiry%20-%20Asian%20Mag%20Exim" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;padding:10px 20px;border-radius:8px;background:#111827;color:#fff;text-decoration:none;align-self:flex-start;">
+          <i class="ti ti-arrow-right" style="font-size:15px;"></i> Request a quote
+        </a>
+      </div> -->
+
+    <!-- </div> -->
+
+  </div>
+</section>
     </div>
   </div>
 </section>
