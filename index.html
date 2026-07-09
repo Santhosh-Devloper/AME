@@ -646,7 +646,150 @@ section{position:relative;}
 /* ============================================================
    CONTACT
    ============================================================ */
-.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:0;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);}
+     /* :root{
+    --navy-900:#0B1526;
+    --navy-800:#101E36;
+    --orange-500:#FF6A1A;
+    --orange-400:#FF8A4C;
+    --teal-500:#0F6E56;
+    --white:#FFFFFF;
+    --ink:#181D27;
+    --gray-50:#F7F8FA;
+    --gray-100:#F1F2F5;
+    --gray-200:#E4E7EC;
+    --gray-300:#C9CED8;
+    --gray-500:#6B7280;
+    --radius:10px;
+    --radius-lg:18px;
+    --shadow-lg:0 20px 50px -20px rgba(11,21,38,.25);
+    --font-body:'Inter',system-ui,sans-serif;
+    --font-mono:'JetBrains Mono',monospace;
+  } */
+  /* *{box-sizing:border-box;}
+  body{margin:0;font-family:var(--font-body);background:var(--gray-50);color:var(--ink);} */
+
+  .contact-section{padding:96px 24px;}
+  .contact-wrap{max-width:1180px;margin:0 auto;}
+
+  .section-head{max-width:640px;margin:0 auto 48px;text-align:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--font-mono);font-size:12px;font-weight:600;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--orange-500);
+    margin-bottom:14px;
+  }
+  .eyebrow::before{content:"";width:18px;height:1.5px;background:var(--orange-500);display:inline-block;}
+  .section-head h2{font-size:clamp(28px,4vw,42px);font-weight:800;line-height:1.15;margin:0 0 14px;letter-spacing:-.01em;}
+  .section-head h2 em{font-style:italic;color:var(--orange-500);font-weight:700;}
+  .section-head p{font-size:16px;line-height:1.65;color:var(--gray-500);margin:0;}
+
+  /* ============ TWO COLUMN GRID ============ */
+  .contact-grid{
+    display:grid;grid-template-columns:.82fr 1.18fr;
+    border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);
+    background:var(--white);
+  }
+
+  /* ---------- LEFT: info panel ---------- */
+  .contact-info{
+    background:var(--navy-900);color:var(--white);
+    padding:56px 44px;position:relative;overflow:hidden;
+  }
+  .contact-info::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 100% 0%, rgba(255,106,26,.16), transparent 55%);
+    pointer-events:none;
+  }
+  .contact-info h3{font-size:22px;font-weight:700;margin:0 0 12px;position:relative;}
+  .contact-info > p{color:var(--gray-300);font-size:14.5px;line-height:1.7;margin:0 0 36px;position:relative;}
+
+  .contact-item{display:flex;gap:16px;margin-bottom:26px;position:relative;}
+  .contact-item .ic{
+    width:44px;height:44px;border-radius:var(--radius);flex:none;
+    background:rgba(255,106,26,.14);border:1px solid rgba(255,106,26,.32);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .contact-item .ic svg{width:19px;height:19px;stroke:var(--orange-400);}
+  .contact-item .lbl{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-300);margin:0 0 4px;}
+  .contact-item a.val, .contact-item .val{font-size:15px;font-weight:600;color:var(--white);text-decoration:none;line-height:1.5;}
+  .contact-item a.val:hover{color:var(--orange-400);}
+
+  .info-stats{
+    display:flex;position:relative;margin-top:40px;padding-top:28px;
+    border-top:1px solid rgba(255,255,255,.12);
+  }
+  .info-stats div{flex:1;text-align:left;}
+  .info-stats p.num{font-size:20px;font-weight:800;margin:0;color:var(--white);}
+  .info-stats p.lbl2{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-300);margin:2px 0 0;}
+
+  /* ---------- RIGHT: form panel ---------- */
+  .contact-form-wrap{padding:56px 48px;position:relative;}
+  .contact-form-wrap h3{font-size:20px;font-weight:700;margin:0 0 6px;}
+  .contact-form-wrap > p.form-lede{font-size:14px;color:var(--gray-500);margin:0 0 28px;}
+
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+  .field{display:flex;flex-direction:column;gap:7px;}
+  .field label{font-size:12px;font-weight:700;color:var(--navy-900);letter-spacing:.02em;text-transform:uppercase;}
+  .field label .req{color:var(--orange-500);}
+  .field .err-msg{font-size:11.5px;color:#D3402C;min-height:14px;display:none;}
+  .field.has-error .err-msg{display:block;}
+  .field.has-error input,.field.has-error select,.field.has-error textarea{border-color:#D3402C;background:#FDF3F2;}
+
+  .field input,.field select,.field textarea{
+    border:1.5px solid var(--gray-200);border-radius:var(--radius);padding:12px 14px;
+    font-size:14.5px;font-family:var(--font-body);color:var(--ink);background:var(--gray-50);
+    transition:border-color .2s,background .2s,box-shadow .2s;width:100%;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{
+    border-color:var(--orange-500);background:var(--white);outline:none;
+    box-shadow:0 0 0 4px rgba(255,106,26,.12);
+  }
+  .field textarea{resize:vertical;min-height:100px;}
+
+  .form-submit{
+    width:100%;display:flex;align-items:center;justify-content:center;gap:8px;
+    background:var(--orange-500);color:var(--white);border:none;border-radius:var(--radius);
+    padding:15px;font-size:14.5px;font-weight:700;cursor:pointer;margin-top:8px;
+    transition:background .2s,transform .15s;
+  }
+  .form-submit:hover:not(:disabled){background:#E85A0F;}
+  .form-submit:active:not(:disabled){transform:scale(.99);}
+  .form-submit:disabled{background:var(--gray-300);cursor:not-allowed;}
+
+  .spinner{
+    width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;
+    border-radius:50%;animation:spin .7s linear infinite;display:none;
+  }
+  .form-submit.loading .spinner{display:inline-block;}
+  .form-submit.loading .submit-label{display:none;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  .form-note{font-size:11.5px;color:var(--gray-500);margin-top:14px;text-align:center;}
+
+  .alert{
+    display:none;align-items:flex-start;gap:12px;border-radius:var(--radius);
+    padding:14px 16px;font-size:13.5px;font-weight:500;margin-bottom:20px;line-height:1.5;
+  }
+  .alert.show{display:flex;}
+  .alert svg{width:19px;height:19px;flex:none;margin-top:1px;}
+  .alert-success{background:#EFFAF1;border:1px solid #BCE7C2;color:#1E6B33;}
+  .alert-error{background:#FDF3F2;border:1px solid #F2C1BA;color:#B3271A;}
+
+  @media (max-width:900px){
+    .contact-grid{grid-template-columns:1fr;}
+    .contact-info,.contact-form-wrap{padding:40px 28px;}
+  }
+  @media (max-width:520px){
+    .form-row{grid-template-columns:1fr;}
+    .contact-section{padding:64px 16px;}
+    .info-stats{flex-wrap:wrap;gap:16px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .spinner{animation:none;}
+    .form-submit{transition:none;}
+  }
+/* .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:0;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);}
 .contact-info{background:var(--navy-900);color:var(--white);padding:56px 48px;position:relative;overflow:hidden;}
 .contact-info h3{font-size:24px;text-transform:uppercase;margin-bottom:14px;position:relative;}
 .contact-info > p{color:var(--gray-300);font-size:14.5px;margin-bottom:38px;position:relative;line-height:1.7;}
@@ -682,7 +825,7 @@ section{position:relative;}
 .form-success svg{width:20px;height:20px;flex:none;}
 
 @media (max-width:980px){.contact-grid{grid-template-columns:1fr;}}
-@media (max-width:560px){.form-row{grid-template-columns:1fr;}.contact-info,.contact-form{padding:40px 26px;}}
+@media (max-width:560px){.form-row{grid-template-columns:1fr;}.contact-info,.contact-form{padding:40px 26px;}} */
 
 /* ============================================================
    FOOTER
@@ -1361,207 +1504,134 @@ section{position:relative;}
 <!-- ============================================================
      CONTACT
      ============================================================ -->
-<section class="section" id="contact">
-  <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Contact Us</span>
-      <h2>Get In <em>Touch</em> With Us</h2>
-      <!-- <p>Send us your enquiry and our team will respond within 24 hours with detailed product specifications and pricing.</p> -->
-    </div>
-    <div class="cc-section">
+<section class="contact-section" id="contact">
+  <div class="contact-wrap">
 
-  <p class="cc-eyebrow">Export enquiries &amp; support</p>
-  <h2 class="cc-title">Connect with <em>Us</em> Directly</h2>
-  <p class="cc-sub">No forms, no back-and-forth. Reach our export team through your preferred channel — available for bulk enquiries, pricing, and logistics support worldwide.</p>
-
-  <div class="cc-grid">
-
-    <!-- Phone -->
-    <div class="cc-card">
-      <div style="display:flex;align-items:center;gap:14px;">
-        <div class="cc-icon-box" style="background:#E1F5EE;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
-        </div>
-        <div>
-          <p class="cc-label">Phone</p>
-          <p class="cc-val">+91 86104 85753</p>
-        </div>
-      </div>
-      <p class="cc-desc">Speak directly with our export team for specifications, availability, and urgent freight queries.</p>
-      <a href="tel:+918610485753" class="cc-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
-        Call now
-      </a>
+    <div class="section-head">
+      <span class="eyebrow">Export Enquiries &amp; Support</span>
+      <h2>Connect With <em>Us</em> Directly</h2>
+      <p>Share your product requirements, quantity, and destination — our export team responds with detailed specifications and pricing within 24 hours.</p>
     </div>
 
-    <!-- Email -->
-    <div class="cc-card">
-      <div style="display:flex;align-items:center;gap:14px;">
-        <div class="cc-icon-box" style="background:#E6F1FB;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
-        </div>
-        <div>
-          <p class="cc-label">Email</p>
-          <p class="cc-val">info@asianmagexim.com</p>
-        </div>
-      </div>
-      <p class="cc-desc">Send your product requirements, quantity, and destination — we reply with a detailed quote within 24 hours.</p>
-      <a href="mailto:info@asianmagexim.com" class="cc-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9l20-7z"/></svg>
-        Send email
-      </a>
-    </div>
+    <div class="contact-grid">
 
-    <!-- WhatsApp -->
-    <div class="cc-card">
-      <div style="display:flex;align-items:center;gap:14px;">
-        <div class="cc-icon-box" style="background:#EAF3DE;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10c0 5 6 5 6 0"/></svg>
-        </div>
-        <div>
-          <p class="cc-label">WhatsApp</p>
-          <p class="cc-val">+91 86104 85753</p>
-        </div>
-      </div>
-      <p class="cc-desc">Quickest way to share documents or get instant answers on orders — chat with us right now.</p>
-      <a href="https://wa.me/918610485753" class="cc-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10c0 5 6 5 6 0"/></svg>
-        Chat on WhatsApp
-      </a>
-    </div>
+      <!-- ============ LEFT: Company & Contact Info ============ -->
+      <div class="contact-info">
+        <h3>Reach Our Team</h3>
+        <p>Our export and technical teams are available worldwide to discuss specifications, pricing, and logistics for your region.</p>
 
-    <!-- Address -->
-    <div class="cc-card">
-      <div style="display:flex;align-items:center;gap:14px;">
-        <div class="cc-icon-box" style="background:#FAEEDA;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#854F0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <!-- <div class="contact-item">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+          <div>
+            <p class="lbl">Address</p>
+            <p class="val">Asian Mag Exim Inc, Industrial Area, Salem, Tamil Nadu, India – 636 001</p>
+          </div>
+        </div> -->
+        <div class="contact-item">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div>
+          <div>
+            <p class="lbl">Phone</p>
+            <a class="val" href="tel:+918610485753">+91 86104 85753</a>
+          </div>
         </div>
-        <div>
-          <p class="cc-label">Address</p>
-          <p class="cc-val">Salem, Tamil Nadu</p>
-        </div>
-      </div>
-      <p class="cc-desc">Asian Mag Exim Inc, Industrial Area, Salem, Tamil Nadu, India — 636 001.</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Salem+Tamil+Nadu+India" class="cc-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
-        View on map
-      </a>
-    </div>
 
+        <div class="contact-item">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></div>
+          <div>
+            <p class="lbl">Email</p>
+            <a class="val" href="mailto:info@asianmagexim.com">info@asianmagexim.com</a>
+          </div>
+        </div>
+<div class="contact-item">
+  <div class="ic">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/>
+      <circle cx="12" cy="9" r="2.5"/>
+    </svg>
   </div>
+  <div>
+    <p class="lbl">Address</p>
+    <p class="val">
+      <strong>Head &amp; Corporate Office</strong><br>
+      6/353 Near Semariyamman Kovil, Sengaradu,<br>
+      Salem, Tamilnadu-636012 (India)
+      <br><br>
 
-  <!-- Bottom row -->
-  <!-- <div class="cc-bottom">
-
-     Trust stats -->
-    <!-- <div class="cc-trust">
-      <div><p class="cc-stat-num">500+</p><p class="cc-stat-lbl">Clients</p></div>
-      <div class="cc-divider"></div>
-      <div><p class="cc-stat-num">30+</p><p class="cc-stat-lbl">Countries</p></div>
-      <div class="cc-divider"></div>
-      <div><p class="cc-stat-num">20+</p><p class="cc-stat-lbl">Years</p></div>
-      <div class="cc-divider"></div>
-      <div><p class="cc-stat-num">ISO</p><p class="cc-stat-lbl">Certified</p></div>
-    </div> --> 
-
-    <!-- CTA -->
-    <!-- <div class="cc-cta-card">
-      <div>
-        <div class="cc-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Replies within 24 hrs
-        </div>
-        <p class="cc-cta-title">Ready to place a bulk order?</p>
-        <p class="cc-cta-sub">Share your destination, quantity, and product — we'll handle everything from quote to delivery.</p>
-      </div>
-      <a href="mailto:info@asianmagexim.com?subject=Bulk%20Enquiry%20-%20Asian%20Mag%20Exim" class="cc-cta-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        Request a quote
-      </a>
-    </div> -->
-
+      <strong>Registered Office</strong><br>
+      9/168 Opp Hanuman Temple,<br>
+      Chillikadu, Vellalapatti Post,<br>
+      Salem, Tamilnadu-636012 (India)
+    </p>
   </div>
 </div>
 
-    <!-- <div class="contact-grid reveal reveal-zoom"> -->
-      <!-- <div class="contact-info">
-        <div class="grid-texture"></div>
-        <h3>Reach Our Team</h3>
-        <p>Our export and technical teams are available to discuss specifications, pricing, and logistics for your region.</p>
-
-        <div class="contact-item">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><div class="lbl">Address</div><div class="val">Asian Mag Exim Inc, Industrial Area, Salem, Tamil Nadu, India – 636 001</div></div>
-        </div>
-        <div class="contact-item">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <div><div class="lbl">Phone</div><a class="val" href="tel:+918610485753">+91 8610485753</a></div>
-        </div>
-        <div class="contact-item">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg></div>
-          <div><div class="lbl">Email</div><a class="val" href="mailto:info@asianmagexim.com">info@asianmagexim.com</a></div>
-        </div>
-        <div class="contact-item">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 3.2z"/></svg></div>
-          <div><div class="lbl">WhatsApp</div><a class="val" href="https://wa.me/8610485753" target="_blank" rel="noopener">+91 8610485753</a></div>
+        <!-- <div class="contact-item">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div>
+          <div>
+            <p class="lbl">Phone</p>
+            <a class="val" href="tel:+918610485753">+91 86104 85753</a>
+          </div>
         </div>
 
-        <div class="contact-social">
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.27c-1 0-1.7-.73-1.7-1.63s.72-1.63 1.74-1.63 1.7.73 1.72 1.63c0 .9-.7 1.63-1.76 1.63zm12.5 10.27h-3v-4.83c0-1.21-.43-2.04-1.52-2.04-.83 0-1.32.56-1.54 1.1-.08.19-.1.45-.1.71v5.06h-3s.04-8.21 0-9h3v1.28c.4-.61 1.11-1.49 2.7-1.49 1.97 0 3.46 1.29 3.46 4.05v5.16z"/></svg></a>
-          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.4 8.5L23 22h-6.8l-5.3-6.9L4.7 22H1.6l7.9-9-7.2-9h7l4.8 6.3L18.9 2z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.6-.46-5.3a3 3 0 0 0-2.1-2.1C18.7 4 12 4 12 4s-6.7 0-8.44.6a3 3 0 0 0-2.1 2.1C1 8.4 1 12 1 12s0 3.6.46 5.3a3 3 0 0 0 2.1 2.1C5.3 20 12 20 12 20s6.7 0 8.44-.6a3 3 0 0 0 2.1-2.1C23 15.6 23 12 23 12zM9.8 15.5v-7l6 3.5z"/></svg></a>
+        <div class="contact-item">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></div>
+          <div>
+            <p class="lbl">Email</p>
+            <a class="val" href="mailto:info@asianmagexim.com">info@asianmagexim.com</a>
+          </div>
+        </div> -->
+
+
+        <div class="info-stats">
+          <div><p class="num">30+</p><p class="lbl2">Countries</p></div>
+          <div><p class="num">20+</p><p class="lbl2">Years</p></div>
+          <div><p class="num">ISO</p><p class="lbl2">Certified</p></div>
         </div>
-      </div> -->
-<!-- <div class="contact-form">
-  <span class="qc-eyebrow">Quick Connect</span>
-  <h3>Reach Us Directly</h3>
-  <p class="qc-lede">No forms, no waiting — tap a card below and we'll be right there. Our team typically replies within 24 hours.</p>
+      </div>
 
-  <div class="quick-grid">
-    <a class="quick-card" href="tel:+918610485753">
-      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-      <div class="quick-title">Call Us</div>
-      <div class="quick-sub">+91 8610485753</div>
-    </a>
-    <a class="quick-card" href="mailto:info@asianmagexim.com">
-      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg></div>
-      <div class="quick-title">Email Us</div>
-      <div class="quick-sub">info@asianmagexim.com</div>
-    </a>
-    <a class="quick-card" href="https://wa.me/918610485753" target="_blank" rel="noopener">
-      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 3.2z"/></svg></div>
-      <div class="quick-title">WhatsApp</div>
-      <div class="quick-sub">Chat instantly</div>
-    </a>
-    <a class="quick-card" href="https://www.google.com/maps/search/?api=1&query=Salem+Tamil+Nadu+India" target="_blank" rel="noopener">
-      <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <div class="quick-title">Visit Us</div>
-      <div class="quick-sub">Salem, Tamil Nadu</div>
-    </a>
-  </div>
+      <!-- ============ RIGHT: Contact Form ============ -->
+      <div class="contact-form-wrap">
 
-  <div class="response-badge">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-    We typically respond within 24 hours
-  </div> -->
-<!-- </div> -->
-      <!-- <div class="contact-form">
-        <div class="form-success" id="formSuccess">
+        <div class="alert alert-success" id="formSuccess">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-          Thank you — your enquiry has been received. Our team will respond within 24 hours.
+          <span>Thank you — your enquiry has been received. Our team will respond within 24 hours.</span>
         </div>
-        <form id="enquiryForm">
+
+        <div class="alert alert-error" id="formError">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span id="formErrorText">Something went wrong. Please try again, or reach us directly by phone or email.</span>
+        </div>
+
+        <h3>Send Us Your Enquiry</h3>
+        <p class="form-lede">Fill in your details below and we'll get back to you with a detailed quote.</p>
+
+        <form id="enquiryForm" novalidate>
           <div class="form-row">
-            <div class="field"><label>Full Name <span class="req">*</span></label><input type="text" name="name" required placeholder="Your full name"></div>
-            <div class="field"><label>Company Name</label><input type="text" name="company" placeholder="Your company"></div>
+            <div class="field" data-field="name">
+              <label>Full Name <span class="req">*</span></label>
+              <input type="text" name="name" placeholder="Your full name">
+              <span class="err-msg">Please enter your name.</span>
+            </div>
+            <div class="field" data-field="company">
+              <label>Company Name</label>
+              <input type="text" name="company" placeholder="Your company">
+            </div>
           </div>
+
           <div class="form-row">
-            <div class="field"><label>Email Address <span class="req">*</span></label><input type="email" name="email" required placeholder="you@company.com"></div>
-            <div class="field"><label>Phone / WhatsApp</label><input type="tel" name="phone" placeholder="+xx xxxxx xxxxx"></div>
+            <div class="field" data-field="email">
+              <label>Email Address <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="you@company.com">
+              <span class="err-msg">Please enter a valid email address.</span>
+            </div>
+            <div class="field" data-field="phone">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" name="phone" placeholder="+xx xxxxx xxxxx">
+            </div>
           </div>
+
           <div class="form-row">
-            <div class="field">
+            <div class="field" data-field="product">
               <label>Product of Interest</label>
               <select name="product">
                 <option value="">— Select Product Category —</option>
@@ -1579,137 +1649,28 @@ section{position:relative;}
                 <option>Other</option>
               </select>
             </div>
-            <div class="field"><label>Country / Destination</label><input type="text" name="country" placeholder="e.g. Germany, UAE"></div>
+            <div class="field" data-field="country">
+              <label>Country / Destination</label>
+              <input type="text" name="country" placeholder="e.g. Germany, UAE">
+            </div>
           </div>
-          <div class="field" style="margin-bottom:24px;">
+
+          <div class="field" data-field="message" style="margin-bottom:22px;">
             <label>Message / Requirement</label>
             <textarea name="message" placeholder="Tell us about quantity, specification, and destination port..."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary form-submit">Send Enquiry Now
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+
+          <button type="submit" class="form-submit" id="submitBtn">
+            <span class="spinner"></span>
+            <span class="submit-label">Send Enquiry Now</span>
           </button>
           <p class="form-note">By submitting, you agree to be contacted regarding your enquiry. We respect your privacy.</p>
         </form>
-      </div> -->
-      <!-- <section id="contact" style="padding: 5rem 0;">
-  <div style="max-width: 1100px; margin: 0 auto; padding: 0 2rem;"> -->
 
-    <!-- Section heading (keep your existing styling) -->
-    <!-- <p style="font-size:12px;color:#9ca3af;letter-spacing:.07em;text-transform:uppercase;margin:0 0 6px;">Export enquiries &amp; support</p>
-    <h2 style="font-size:2rem;font-weight:700;margin:0 0 8px;">Connect with <em>Us</em> Directly</h2>
-    <p style="font-size:15px;color:#6b7280;max-width:560px;line-height:1.6;margin:0 0 2rem;">
-      No forms, no back-and-forth. Reach our export team through your preferred channel — available for bulk enquiries, pricing, and logistics support.
-    </p> -->
-
-    <!-- 4-channel grid -->
-    <!-- <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:12px;"> -->
-
-      <!-- Phone -->
-      <!-- <div class="contact-card">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px;">
-          <div style="width:46px;height:46px;border-radius:10px;background:#E1F5EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <i class="ti ti-phone" style="font-size:22px;color:#0F6E56;"></i>
-          </div>
-          <div>
-            <p style="font-size:11px;color:#9ca3af;letter-spacing:.05em;text-transform:uppercase;margin:0;">Phone</p>
-            <p style="font-size:15px;font-weight:600;color:#111827;margin:0;">+91 86104 85753</p>
-          </div>
-        </div>
-        <p style="font-size:13px;color:#6b7280;line-height:1.5;margin:0 0 14px;">Speak directly with our export team for specifications, availability, and urgent freight queries.</p>
-        <a href="tel:+918610485753" class="cc-btn"><i class="ti ti-phone-call"></i> Call now</a>
-      </div> -->
-
-      <!-- Email -->
-      <!-- <div class="contact-card">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px;">
-          <div style="width:46px;height:46px;border-radius:10px;background:#E6F1FB;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <i class="ti ti-mail" style="font-size:22px;color:#185FA5;"></i>
-          </div>
-          <div>
-            <p style="font-size:11px;color:#9ca3af;letter-spacing:.05em;text-transform:uppercase;margin:0;">Email</p>
-            <p style="font-size:15px;font-weight:600;color:#111827;margin:0;">info@asianmagexim.com</p>
-          </div>
-        </div>
-        <p style="font-size:13px;color:#6b7280;line-height:1.5;margin:0 0 14px;">Send your product requirements, quantity, and destination — we reply with a detailed quote within 24 hours.</p>
-        <a href="mailto:info@asianmagexim.com" class="cc-btn"><i class="ti ti-send"></i> Send email</a>
-      </div> -->
-
-      <!-- WhatsApp -->
-      <!-- <div class="contact-card">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px;">
-          <div style="width:46px;height:46px;border-radius:10px;background:#EAF3DE;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <i class="ti ti-brand-whatsapp" style="font-size:22px;color:#3B6D11;"></i>
-          </div>
-          <div>
-            <p style="font-size:11px;color:#9ca3af;letter-spacing:.05em;text-transform:uppercase;margin:0;">WhatsApp</p>
-            <p style="font-size:15px;font-weight:600;color:#111827;margin:0;">+91 86104 85753</p>
-          </div>
-        </div>
-        <p style="font-size:13px;color:#6b7280;line-height:1.5;margin:0 0 14px;">Quickest way to share documents or get instant answers on orders — chat with us right now.</p>
-        <a href="https://wa.me/918610485753" class="cc-btn"><i class="ti ti-message-circle"></i> Chat on WhatsApp</a> -->
-      <!-- </div> -->
-
-      <!-- Address -->
-      <!-- <div class="contact-card">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px;">
-          <div style="width:46px;height:46px;border-radius:10px;background:#FAEEDA;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <i class="ti ti-map-pin" style="font-size:22px;color:#854F0B;"></i>
-          </div>
-          <div>
-            <p style="font-size:11px;color:#9ca3af;letter-spacing:.05em;text-transform:uppercase;margin:0;">Address</p>
-            <p style="font-size:15px;font-weight:600;color:#111827;margin:0;">Salem, Tamil Nadu</p>
-          </div>
-        </div>
-        <p style="font-size:13px;color:#6b7280;line-height:1.5;margin:0 0 14px;">Asian Mag Exim Inc, Industrial Area, Salem, Tamil Nadu, India — 636 001.</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=Salem+Tamil+Nadu+India" class="cc-btn"><i class="ti ti-map"></i> View on map</a>
       </div>
-
-    </div> -->
-
-    <!-- Bottom row: trust stats + CTA -->
-    <!-- <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"> -->
-
-      <!-- Trust stats
-      <div style="background:#f9fafb;border-radius:12px;padding:1.5rem;display:flex;align-items:center;justify-content:space-around;">
-        <div style="text-align:center;">
-          <p style="font-size:22px;font-weight:700;color:#111827;margin:0;">500+</p>
-          <p style="font-size:11px;color:#9ca3af;margin:0;">Clients</p>
-        </div>
-        <div style="width:1px;height:36px;background:#e5e7eb;"></div>
-        <div style="text-align:center;">
-          <p style="font-size:22px;font-weight:700;color:#111827;margin:0;">30+</p>
-          <p style="font-size:11px;color:#9ca3af;margin:0;">Countries</p>
-        </div>
-        <div style="width:1px;height:36px;background:#e5e7eb;"></div>
-        <div style="text-align:center;">
-          <p style="font-size:22px;font-weight:700;color:#111827;margin:0;">20+</p>
-          <p style="font-size:11px;color:#9ca3af;margin:0;">Years</p>
-        </div>
-        <div style="width:1px;height:36px;background:#e5e7eb;"></div>
-        <div style="text-align:center;">
-          <p style="font-size:22px;font-weight:700;color:#111827;margin:0;">ISO</p>
-          <p style="font-size:11px;color:#9ca3af;margin:0;">Certified</p>
-        </div>
-      </div> -->
-
-      <!-- CTA card -->
-      <!-- <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;gap:12px;">
-        <div>
-          <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:3px 10px;border-radius:99px;background:#E1F5EE;color:#085041;font-weight:600;margin-bottom:8px;">
-            <i class="ti ti-clock" style="font-size:12px;"></i> Replies within 24 hrs
-          </span>
-          <p style="font-size:16px;font-weight:700;color:#111827;margin:0 0 4px;">Ready to place a bulk order?</p>
-          <p style="font-size:13px;color:#6b7280;margin:0;">Share your destination, quantity, and product — we'll handle the rest from quote to delivery.</p>
-        </div>
-        <a href="mailto:info@asianmagexim.com?subject=Bulk%20Enquiry%20-%20Asian%20Mag%20Exim" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;padding:10px 20px;border-radius:8px;background:#111827;color:#fff;text-decoration:none;align-self:flex-start;">
-          <i class="ti ti-arrow-right" style="font-size:15px;"></i> Request a quote
-        </a>
-      </div> -->
-
-    <!-- </div> -->
-
+    </div>
   </div>
-</section>
+</section>`
     </div>
   </div>
 </section>
@@ -1735,12 +1696,12 @@ section{position:relative;}
           </span>
         </a>
         <p>Manufacturer, Exporter &amp; Supplier of Refractory, Magnesium Sulphate and Steel Plant Products since 2005.</p>
-        <div class="footer-social">
+        <!-- <div class="footer-social">
           <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.27c-1 0-1.7-.73-1.7-1.63s.72-1.63 1.74-1.63 1.7.73 1.72 1.63c0 .9-.7 1.63-1.76 1.63zm12.5 10.27h-3v-4.83c0-1.21-.43-2.04-1.52-2.04-.83 0-1.32.56-1.54 1.1-.08.19-.1.45-.1.71v5.06h-3s.04-8.21 0-9h3v1.28c.4-.61 1.11-1.49 2.7-1.49 1.97 0 3.46 1.29 3.46 4.05v5.16z"/></svg></a>
           <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.4 8.5L23 22h-6.8l-5.3-6.9L4.7 22H1.6l7.9-9-7.2-9h7l4.8 6.3L18.9 2z"/></svg></a>
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
           <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.6-.46-5.3a3 3 0 0 0-2.1-2.1C18.7 4 12 4 12 4s-6.7 0-8.44.6a3 3 0 0 0-2.1 2.1C1 8.4 1 12 1 12s0 3.6.46 5.3a3 3 0 0 0 2.1 2.1C5.3 20 12 20 12 20s6.7 0 8.44-.6a3 3 0 0 0 2.1-2.1C23 15.6 23 12 23 12zM9.8 15.5v-7l6 3.5z"/></svg></a>
-        </div>
+        </div> -->
       </div>
 
       <div class="footer-col">
@@ -1802,6 +1763,7 @@ section{position:relative;}
   </a>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
 (function(){
   'use strict';
@@ -2028,19 +1990,139 @@ section{position:relative;}
   restartAutoplay();
   });
 
-  /* ---------- Contact form (static-site friendly handler) ---------- */
-  safeInit('contact form', function(){
-  var form = document.getElementById('enquiryForm');
-  var formSuccess = document.getElementById('formSuccess');
-  form.addEventListener('submit', function(e){
+ 
+(function () {
+  "use strict";
+
+  /* ---------------------------------------------------------------
+     CONFIG — replace with your own EmailJS credentials.
+     Find these in the EmailJS dashboard:
+       Public Key  -> Account > General
+       Service ID  -> Email Services
+       Template ID -> Email Templates ("Contact Us" template)
+  --------------------------------------------------------------- */
+  const EMAILJS_PUBLIC_KEY  = "ihPrEmpD1NuN6OZWC";
+  const EMAILJS_SERVICE_ID  = "service_ld1xiuq";
+  const EMAILJS_TEMPLATE_ID = "template_yz9tag7";
+
+  emailjs.init("ihPrEmpD1NuN6OZWC");
+
+  const form        = document.getElementById("enquiryForm");
+  const submitBtn   = document.getElementById("submitBtn");
+  const successBox  = document.getElementById("formSuccess");
+  const errorBox    = document.getElementById("formError");
+  const errorText   = document.getElementById("formErrorText");
+
+  let isSubmitting = false; // duplicate-submission guard
+
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function fieldWrap(name) {
+    return form.querySelector(`[data-field="${name}"]`);
+  }
+
+  function setError(name, show) {
+    const wrap = fieldWrap(name);
+    if (!wrap) return;
+    wrap.classList.toggle("has-error", show);
+  }
+
+  function validate(data) {
+    let valid = true;
+
+    if (!data.name.trim()) { setError("name", true); valid = false; }
+    else setError("name", false);
+
+    if (!data.email.trim() || !EMAIL_RE.test(data.email.trim())) { setError("email", true); valid = false; }
+    else setError("email", false);
+
+    return valid;
+  }
+
+  function hideAlerts() {
+    successBox.classList.remove("show");
+    errorBox.classList.remove("show");
+  }
+
+  function setLoading(loading) {
+    isSubmitting = loading;
+    submitBtn.disabled = loading;
+    submitBtn.classList.toggle("loading", loading);
+  }
+
+  function buildMessageBody(data) {
+    // Combine every field into one readable message body, since the
+    // EmailJS template only renders {{name}}, {{email}}, {{message}}, {{time}}.
+    const lines = [
+      // `Company: ${data.company || "—"}`,
+      // `Phone / WhatsApp: ${data.phone || "—"}`,
+      `Product of Interest: ${data.product || "—"}`,
+      `Country / Destination: ${data.country || "—"}`,
+      "",
+      "Message:",
+      data.message || "—"
+    ];
+    return lines.join("\n");
+  }
+
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
-    formSuccess.classList.add('show');
-    formSuccess.scrollIntoView({behavior:'smooth', block:'center'});
-    form.reset();
-    setTimeout(function(){ formSuccess.classList.remove('show'); }, 8000);
-  });
+    if (isSubmitting) return; // guard against double-clicks / double submits
+
+    hideAlerts();
+
+    const formData = new FormData(form);
+    const data = {
+      name:    (formData.get("name") || "").toString(),
+      company: (formData.get("company") || "").toString(),
+      email:   (formData.get("email") || "").toString(),
+      phone:   (formData.get("phone") || "").toString(),
+      product: (formData.get("product") || "").toString(),
+      country: (formData.get("country") || "").toString(),
+      message: (formData.get("message") || "").toString()
+    };
+
+    if (!validate(data)) return;
+
+    setLoading(true);
+
+    const templateParams = {
+      name:    data.name,
+      email:   data.email,
+      title:   data.product ? `Enquiry — ${data.product}` : "New Website Enquiry",
+      product: data.product,
+      location: data.location,
+      requirement: data.message,
+      company: data.company,
+      phone: data.phone,
+      time:    new Date().toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" }),
+      message: buildMessageBody(data)
+    };
+
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+      successBox.classList.add("show");
+      form.reset();
+      ["name", "email"].forEach(f => setError(f, false));
+    }catch (err) {
+  console.error("EmailJS error status:", err.status);
+  console.error("EmailJS error text:", err.text);
+  errorText.textContent = "Something went wrong sending your enquiry. Please try again, or reach us directly by phone or email.";
+  errorBox.classList.add("show");
+}finally {
+      setLoading(false);
+    }
   });
 
+  // Clear an error as soon as the person starts fixing that field
+  ["name", "email"].forEach(function (name) {
+    const wrap = fieldWrap(name);
+    const input = wrap && wrap.querySelector("input");
+    if (input) {
+      input.addEventListener("input", () => setError(name, false));
+    }
+  });
+})();
 })();
 </script>
 </body>
